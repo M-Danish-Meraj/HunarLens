@@ -122,6 +122,7 @@ def normalize_identifiers(
     for col in required:
         # Preserve NA so missing identifiers can be audited and dropped cleanly
         not_na = out[col].notna()
+        out[col] = out[col].astype(object)
         cleaned = (
             out.loc[not_na, col]
             .astype(str)

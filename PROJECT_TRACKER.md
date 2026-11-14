@@ -42,7 +42,7 @@
   - Implement `src/hunarlens/labels.py` encoding the 19th ICLS youth (15–24) labour-force eligibility filter and `is_unemployed` binary target (`1 = unemployed`, `0 = employed`), with explicit exclusion reason logging.
 - [x] **Step 2.3 — Data Acquisition & Preparation CLI Scripts (`scripts/download_data.py`, `scripts/prepare_data.py`)** *(Completed: Implemented `scripts/download_data.py` with SHA-256 verification and deterministic 600-PSU multi-household LFS 2024–25 reconstruction (`seed=202425`), and `scripts/prepare_data.py` orchestrating identifier deduplication, `PCode` digit-1 province mapping, pre-filter household roster math, verified `m:1` Census 2023 join, 19th ICLS target derivation, descriptive skills separation, and `docs/data_audit.md` generation.)*
   - Implement `scripts/download_data.py` (verifies raw PBS files or generates a deterministic schema-faithful synthetic/sample dataset for CI & offline reproducibility when raw microdata is absent) and `scripts/prepare_data.py` producing `docs/data_audit.md`.
-- [ ] **Step 2.4 — Unit Tests for Labels & Data Integrity (`tests/test_labels.py`)**
+- [x] **Step 2.4 — Unit Tests for Labels & Data Integrity (`tests/test_labels.py`)** *(Completed: Executed `scripts/prepare_data.py` producing 6,966 eligible youth records across 600 PSUs and empirical `docs/data_audit.md`; implemented and ran `tests/test_labels.py` — 6/6 unit tests passing.)*
   - Verify cohort filtering, household roster math, many-to-one Census merge row-count invariance, and label precedence rules.
 
 ---

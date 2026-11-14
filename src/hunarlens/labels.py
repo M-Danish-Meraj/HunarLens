@@ -53,7 +53,11 @@ class LabelAuditSummary:
 
 def _coerce_binary_indicator(series: pd.Series) -> pd.Series:
     """Coerce a raw survey response column to {0.0, 1.0, np.nan} without imputing missing values."""
-    if series.dtype == object or isinstance(series.dtype, pd.CategoricalDtype):
+    if (
+        series.dtype == object
+        or isinstance(series.dtype, pd.CategoricalDtype)
+        or pd.api.types.is_string_dtype(series.dtype)
+    ):
         mapping = {
             "1": 1.0,
             "0": 0.0,
