@@ -70,3 +70,4 @@ cohort_eligibility:
 
 disclosure_control:
   small_cell_min_count: 30         # Suppress subgroup summaries with fewer than 30 observations (§7)
+

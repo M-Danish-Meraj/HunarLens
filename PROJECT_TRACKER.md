@@ -21,11 +21,11 @@
   - Create standard directory tree (`configs/`, `data/{raw,reference,processed,splits}`, `notebooks/`, `src/hunarlens/`, `scripts/`, `app/`, `models/`, `reports/{figures,metrics}`, `tests/`, `docs/`).
   - Add `.gitignore` protecting private microdata (`data/raw/`, `data/processed/`, `data/splits/*.parquet`) while tracking manifests and reference tables.
   - Create `requirements.txt`, `requirements-dev.txt`, and `src/hunarlens/__init__.py`.
-- [x] **Step 1.2 — Declarative YAML Configurations (`configs/`)** *(Completed: Created `configs/data.yaml`, `configs/features.yaml`, and `configs/experiments.yaml` encoding PSU/household/person keys, the 15-feature contract, explicit leakage denylist, 70/15/15 split seeds 42/43/44, 5-fold StratifiedGroupKFold search spaces, ablations, and validation threshold policy.)*
+- [ ] **Step 1.2 — Declarative YAML Configurations (`configs/`)**
   - Create `configs/data.yaml` (LFS 2024–25 & Census 2023 paths, PSU/household/person keys, age 15–24 filter).
   - Create `configs/features.yaml` (15 approved predictors, explicit forbidden/leakage denylist, data types, transformations).
   - Create `configs/experiments.yaml` (seeds 42/43/44, 70/15/15 split ratios, 5-fold `StratifiedGroupKFold`, hyperparameter grids for Dummy, Logistic Regression, Random Forest, and Gradient Boosting, threshold policy).
-- [ ] **Step 1.3 — Data Provenance, Manifest & Governance Docs (`data/`, `docs/`)**
+- [x] **Step 1.3 — Data Provenance, Manifest & Governance Docs (`data/`, `docs/`)** *(Completed: Created `data/README.md`, `data/source_manifest.csv`, `docs/label_definition.md` with 19th ICLS decision rules & worked examples, `docs/feature_review.csv` auditing all 15 accepted predictors and 18 rejected leakage/identifier fields, and `docs/deployment_exception.md`.)*
   - Create `data/README.md` and `data/source_manifest.csv` documenting PBS LFS 2024–25 and Census 2023 sources, access terms, and checksums.
   - Create `docs/label_definition.md` (19th ICLS binary unemployment rules for youth 15–24, exclusion rules for outside-labour-force).
   - Create `docs/feature_review.csv` (accepted 15-feature contract and rejected leakage/proxy register) and `docs/deployment_exception.md`.
