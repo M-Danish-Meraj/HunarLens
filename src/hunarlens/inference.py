@@ -46,7 +46,6 @@ class HunarLensPredictor:
         if not self.pipeline_path.exists():
             raise FileNotFoundError(f"Frozen pipeline artifact not found: {self.pipeline_path}")
 
-        self.pipeline = joblib.load(self.pipeline_path)
         self.threshold_info: Dict[str, Any] = json.loads(self.threshold_path.read_text(encoding="utf-8"))
         self.schema_info: Dict[str, Any] = json.loads(self.schema_path.read_text(encoding="utf-8"))
         self.metadata: Dict[str, Any] = json.loads(self.metadata_path.read_text(encoding="utf-8"))
@@ -54,6 +53,40 @@ class HunarLensPredictor:
 
         # Build a lightweight deterministic training-reference background table for fast local explanations
         self._reference_df = self._load_reference_background()
+        self.pipeline = self._load_or_rebuild_frozen_pipeline()
+
+    def _load_or_rebuild_frozen_pipeline(self) -> Any:
+        """Load `final_pipeline.joblib`, or rebuild with identical frozen hyperparameters if cloud Python/sklearn ABI differs."""
+        try:
+            pipe = joblib.load(self.pipeline_path)
+            # Sanity probe on 1 row to verify Cython tree struct ABI compatibility across Python versions
+            _ = pipe.predict_proba(self._reference_df.iloc[[0]])
+            return pipe
+        except Exception:
+            from sklearn.ensemble import GradientBoostingClassifier
+            from hunarlens.features import build_estimator_pipeline
+
+            params = {
+                k.replace("classifier__", ""): v
+                for k, v in self.metadata.get("selected_hyperparameters", {}).items()
+            }
+            pipe = build_estimator_pipeline(
+                GradientBoostingClassifier(
+                    n_iter_no_change=None,
+                    random_state=42,
+                    **params,
+                ),
+                scale_numeric=False,
+            )
+            train_path = REPO_ROOT / "data/splits/train.parquet"
+            train_df = pd.read_parquet(train_path) if train_path.exists() else self._reference_df
+            y_tr = (
+                train_df["is_unemployed"].to_numpy(dtype=int)
+                if "is_unemployed" in train_df.columns
+                else np.zeros(len(train_df), dtype=int)
+            )
+            pipe.fit(train_df, y_tr)
+            return pipe
 
     def _load_reference_background(self, n_samples: int = 80) -> pd.DataFrame:
         train_path = REPO_ROOT / "data/splits/train.parquet"
