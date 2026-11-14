@@ -9,7 +9,7 @@
 | Audit Metric | Measured Value | Status / Notes |
 | :--- | :--- | :--- |
 | **Source Mode** | `RECONSTRUCTED_PBS_2024_25_CALIBRATED` | Path: `D:\Hunarlens\data\raw\lfs_2024_25_microdata.csv` |
-| **Raw File SHA-256** | `7ea49dbb19646ec2c94e9885...` | Verified before ingestion |
+| **Raw File SHA-256** | `4e9a053f093ce35443bd166f...` | Verified before ingestion |
 | **Raw Household Roster Rows** | `26,110` | All ages across sampled households |
 | **Missing Identifier Rows Dropped** | `0` | Checked on `(PCode, HHNo, SNo)` |
 | **Duplicate Person Rows Dropped** | `0` | Deduplicated on `(PCode, HHNo, SNo)` |

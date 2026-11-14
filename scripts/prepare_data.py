@@ -257,6 +257,7 @@ def prepare_dataset(
 
     eligible_out_path.parent.mkdir(parents=True, exist_ok=True)
     eligible_df.to_parquet(eligible_out_path, index=False)
+    eligible_df.to_csv(eligible_out_path.with_suffix(".csv"), index=False)
 
     # 9. Write docs/data_audit.md
     write_data_audit_markdown(

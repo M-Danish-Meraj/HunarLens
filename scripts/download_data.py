@@ -94,11 +94,21 @@ def generate_schema_faithful_lfs_microdata(
         "3": -0.28,  # Sindh (5.3% overall)
     }
 
+    # Census 2023 Table 1 indicators by PCode first digit (also verified/re-joined in prepare_data.py)
+    census_by_digit = {
+        "1": ("Khyber Pakhtunkhwa", 401.57, 0.1501, 6.95),
+        "2": ("Punjab", 621.83, 0.4070, 6.06),
+        "3": ("Sindh", 395.25, 0.5373, 5.64),
+        "4": ("Balochistan", 42.90, 0.3096, 6.41),
+        "6": ("Islamabad", 2609.12, 0.4690, 5.59),
+    }
+
     records = []
 
     for psu_idx in range(n_psus):
         first_digit = rng.choice(pcode_digits, p=pcode_probs)
         pcode = f"{first_digit}{psu_idx + 10001:07d}"
+        prov_territory, c_density, c_urban_share, c_avg_hh = census_by_digit[first_digit]
 
         # Raw Province folds '6' (Islamabad) into 'Punjab' per PROJECT_PLAN.md §1
         raw_province_map = {
@@ -256,6 +266,7 @@ def generate_schema_faithful_lfs_microdata(
                         "HHNo": hh_no,
                         "SNo": sno,
                         "Province": raw_province,
+                        "province_territory": prov_territory,
                         "locality": locality,
                         "age": age,
                         "sex": sex,
@@ -267,6 +278,12 @@ def generate_schema_faithful_lfs_microdata(
                         "current_enrolment": enrol,
                         "dependents_count": dependents_count,
                         "working_age_count": working_age_count,
+                        "household_size": hh_size,
+                        "household_dependency_ratio": round(dep_ratio, 4),
+                        "regional_pop_density": c_density,
+                        "regional_pop_density_log1p": round(float(np.log1p(c_density)), 6),
+                        "regional_urban_share": c_urban_share,
+                        "regional_avg_household_size": c_avg_hh,
                         "worked_last_week": worked,
                         "temp_absent_from_work": absent,
                         "seeking_work": seeking,
