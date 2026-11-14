@@ -63,7 +63,7 @@
 ## Phase 4: Exploratory Data Analysis (Training Partition Only)
 *Objective: Generate the 7 required development plots and descriptive summaries strictly on the 70% training split (§7).*
 
-- [ ] **Step 4.1 — Training-Only EDA Generator & Figures (`scripts/run_eda.py`, `notebooks/01_data_audit.ipynb`, `notebooks/02_training_eda.ipynb`)**
+- [x] **Step 4.1 — Training-Only EDA Generator & Figures (`scripts/run_eda.py`, `notebooks/01_data_audit.ipynb`, `notebooks/02_training_eda.ipynb`)** *(Completed: Implemented and executed `scripts/run_eda.py` strictly on the 17,913-row training split [1,260 PSUs], generating all 7 required PNG figures in `reports/figures/`, `reports/metrics/eda_summary.json`, `docs/eda_interpretations.md` with `<30` small-cell enforcement, plus `notebooks/01_data_audit.ipynb` and `notebooks/02_training_eda.ipynb`.)*
   - Generate and save all 7 required plots to `reports/figures/` (class balance, feature missingness, numeric distributions, boxplots/quantiles, correlation heatmap, education/enrolment vs. unemployment, province/locality/sex & training summaries with small-cell `<30` suppression).
 
 ---

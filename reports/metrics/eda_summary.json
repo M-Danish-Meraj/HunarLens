@@ -1,0 +1,129 @@
+{
+  "partition": "train_only",
+  "train_row_count": 17913,
+  "train_psu_count": 1260,
+  "small_cell_min_count": 30,
+  "plots": {
+    "plot_01": {
+      "plot_file": "reports\\figures\\01_class_balance.png",
+      "n_train": 17913,
+      "employed_count": 10167,
+      "unemployed_count": 7746,
+      "unweighted_unemployment_rate": 0.4324,
+      "weighted_unemployment_rate": 0.4334
+    },
+    "plot_02": {
+      "plot_file": "reports\\figures\\02_feature_missingness.png",
+      "max_missing_pct": 0.0
+    },
+    "plot_03": {
+      "plot_file": "reports\\figures\\03_numeric_distributions.png",
+      "numeric_stats": {
+        "age": {
+          "mean": 19.527,
+          "median": 20.0,
+          "skew": -0.017,
+          "min": 15.0,
+          "max": 24.0
+        },
+        "household_size": {
+          "mean": 6.16,
+          "median": 6.0,
+          "skew": 0.478,
+          "min": 1.0,
+          "max": 18.0
+        },
+        "household_dependency_ratio": {
+          "mean": 1.081,
+          "median": 0.75,
+          "skew": 2.309,
+          "min": 0.0,
+          "max": 11.0
+        },
+        "regional_pop_density_log1p": {
+          "mean": 6.061,
+          "median": 6.434,
+          "skew": -1.266,
+          "min": 3.782,
+          "max": 7.867
+        }
+      }
+    },
+    "plot_04": {
+      "plot_file": "reports\\figures\\04_numeric_boxplots_outliers.png",
+      "quantiles": {
+        "age": {
+          "p05": 15.0,
+          "p50": 20.0,
+          "p95": 24.0
+        },
+        "household_size": {
+          "p05": 3.0,
+          "p50": 6.0,
+          "p95": 11.0
+        },
+        "household_dependency_ratio": {
+          "p05": 0.0,
+          "p50": 0.75,
+          "p95": 3.0
+        },
+        "regional_urban_share": {
+          "p05": 0.15,
+          "p50": 0.407,
+          "p95": 0.537
+        }
+      }
+    },
+    "plot_05": {
+      "plot_file": "reports\\figures\\05_numeric_correlation_heatmap.png",
+      "target_correlations": {
+        "age": -0.0806,
+        "household_size": 0.0243,
+        "household_dependency_ratio": 0.039,
+        "regional_pop_density_log1p": 0.0596,
+        "regional_urban_share": -0.0532,
+        "regional_avg_household_size": 0.044
+      }
+    },
+    "plot_06": {
+      "plot_file": "reports\\figures\\06_education_enrolment_vs_unemployment.png",
+      "education_rates": [
+        {
+          "education": "No Formal Education",
+          "n": 5372,
+          "unemployment_rate": 0.2906
+        },
+        {
+          "education": "Primary",
+          "n": 2034,
+          "unemployment_rate": 0.4267
+        },
+        {
+          "education": "Middle",
+          "n": 2949,
+          "unemployment_rate": 0.4398
+        },
+        {
+          "education": "Matric",
+          "n": 3915,
+          "unemployment_rate": 0.4679
+        },
+        {
+          "education": "Intermediate",
+          "n": 2322,
+          "unemployment_rate": 0.5504
+        },
+        {
+          "education": "Degree & Postgraduate",
+          "n": 1321,
+          "unemployment_rate": 0.6889
+        }
+      ]
+    },
+    "plot_07": {
+      "plot_file": "reports\\figures\\07_province_locality_sex_training_summary.png",
+      "province_locality_cells": 10,
+      "small_cell_threshold": 30
+    }
+  }
+}
