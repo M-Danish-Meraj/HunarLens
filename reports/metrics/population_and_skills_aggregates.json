@@ -1,0 +1,358 @@
+{
+  "small_cell_min_count": 30,
+  "total_eligible_cohort_n": 25584,
+  "province_locality_sex": [
+    {
+      "province_territory": "Balochistan",
+      "locality": "Rural",
+      "sex": "Female",
+      "sample_n": 644,
+      "unemployed_n": 228,
+      "unweighted_unemployment_rate": 0.354,
+      "weighted_unemployment_rate": 0.3439
+    },
+    {
+      "province_territory": "Balochistan",
+      "locality": "Rural",
+      "sex": "Male",
+      "sample_n": 1169,
+      "unemployed_n": 350,
+      "unweighted_unemployment_rate": 0.2994,
+      "weighted_unemployment_rate": 0.2999
+    },
+    {
+      "province_territory": "Balochistan",
+      "locality": "Urban",
+      "sex": "Female",
+      "sample_n": 305,
+      "unemployed_n": 164,
+      "unweighted_unemployment_rate": 0.5377,
+      "weighted_unemployment_rate": 0.5407
+    },
+    {
+      "province_territory": "Balochistan",
+      "locality": "Urban",
+      "sex": "Male",
+      "sample_n": 505,
+      "unemployed_n": 212,
+      "unweighted_unemployment_rate": 0.4198,
+      "weighted_unemployment_rate": 0.4062
+    },
+    {
+      "province_territory": "Islamabad",
+      "locality": "Rural",
+      "sex": "Female",
+      "sample_n": 173,
+      "unemployed_n": 74,
+      "unweighted_unemployment_rate": 0.4277,
+      "weighted_unemployment_rate": 0.4408
+    },
+    {
+      "province_territory": "Islamabad",
+      "locality": "Rural",
+      "sex": "Male",
+      "sample_n": 283,
+      "unemployed_n": 126,
+      "unweighted_unemployment_rate": 0.4452,
+      "weighted_unemployment_rate": 0.4452
+    },
+    {
+      "province_territory": "Islamabad",
+      "locality": "Urban",
+      "sex": "Female",
+      "sample_n": 365,
+      "unemployed_n": 253,
+      "unweighted_unemployment_rate": 0.6932,
+      "weighted_unemployment_rate": 0.6865
+    },
+    {
+      "province_territory": "Islamabad",
+      "locality": "Urban",
+      "sex": "Male",
+      "sample_n": 627,
+      "unemployed_n": 321,
+      "unweighted_unemployment_rate": 0.512,
+      "weighted_unemployment_rate": 0.5111
+    },
+    {
+      "province_territory": "Khyber Pakhtunkhwa",
+      "locality": "Rural",
+      "sex": "Female",
+      "sample_n": 1239,
+      "unemployed_n": 601,
+      "unweighted_unemployment_rate": 0.4851,
+      "weighted_unemployment_rate": 0.4771
+    },
+    {
+      "province_territory": "Khyber Pakhtunkhwa",
+      "locality": "Rural",
+      "sex": "Male",
+      "sample_n": 2282,
+      "unemployed_n": 1012,
+      "unweighted_unemployment_rate": 0.4435,
+      "weighted_unemployment_rate": 0.4492
+    },
+    {
+      "province_territory": "Khyber Pakhtunkhwa",
+      "locality": "Urban",
+      "sex": "Female",
+      "sample_n": 311,
+      "unemployed_n": 232,
+      "unweighted_unemployment_rate": 0.746,
+      "weighted_unemployment_rate": 0.7369
+    },
+    {
+      "province_territory": "Khyber Pakhtunkhwa",
+      "locality": "Urban",
+      "sex": "Male",
+      "sample_n": 504,
+      "unemployed_n": 300,
+      "unweighted_unemployment_rate": 0.5952,
+      "weighted_unemployment_rate": 0.5769
+    },
+    {
+      "province_territory": "Punjab",
+      "locality": "Rural",
+      "sex": "Female",
+      "sample_n": 2340,
+      "unemployed_n": 963,
+      "unweighted_unemployment_rate": 0.4115,
+      "weighted_unemployment_rate": 0.4157
+    },
+    {
+      "province_territory": "Punjab",
+      "locality": "Rural",
+      "sex": "Male",
+      "sample_n": 4239,
+      "unemployed_n": 1509,
+      "unweighted_unemployment_rate": 0.356,
+      "weighted_unemployment_rate": 0.3539
+    },
+    {
+      "province_territory": "Punjab",
+      "locality": "Urban",
+      "sex": "Female",
+      "sample_n": 1684,
+      "unemployed_n": 1088,
+      "unweighted_unemployment_rate": 0.6461,
+      "weighted_unemployment_rate": 0.6523
+    },
+    {
+      "province_territory": "Punjab",
+      "locality": "Urban",
+      "sex": "Male",
+      "sample_n": 3138,
+      "unemployed_n": 1487,
+      "unweighted_unemployment_rate": 0.4739,
+      "weighted_unemployment_rate": 0.4699
+    },
+    {
+      "province_territory": "Sindh",
+      "locality": "Rural",
+      "sex": "Female",
+      "sample_n": 977,
+      "unemployed_n": 307,
+      "unweighted_unemployment_rate": 0.3142,
+      "weighted_unemployment_rate": 0.3233
+    },
+    {
+      "province_territory": "Sindh",
+      "locality": "Rural",
+      "sex": "Male",
+      "sample_n": 1624,
+      "unemployed_n": 474,
+      "unweighted_unemployment_rate": 0.2919,
+      "weighted_unemployment_rate": 0.2941
+    },
+    {
+      "province_territory": "Sindh",
+      "locality": "Urban",
+      "sex": "Female",
+      "sample_n": 1132,
+      "unemployed_n": 630,
+      "unweighted_unemployment_rate": 0.5565,
+      "weighted_unemployment_rate": 0.5548
+    },
+    {
+      "province_territory": "Sindh",
+      "locality": "Urban",
+      "sex": "Male",
+      "sample_n": 2043,
+      "unemployed_n": 780,
+      "unweighted_unemployment_rate": 0.3818,
+      "weighted_unemployment_rate": 0.384
+    }
+  ],
+  "education_enrolment": [
+    {
+      "highest_education": "Degree & Postgraduate",
+      "current_enrolment": "Currently Enrolled",
+      "sample_n": 470,
+      "unemployed_n": 355,
+      "unweighted_unemployment_rate": 0.7553,
+      "weighted_unemployment_rate": 0.7649
+    },
+    {
+      "highest_education": "Degree & Postgraduate",
+      "current_enrolment": "Not Enrolled",
+      "sample_n": 1466,
+      "unemployed_n": 963,
+      "unweighted_unemployment_rate": 0.6569,
+      "weighted_unemployment_rate": 0.6601
+    },
+    {
+      "highest_education": "Intermediate",
+      "current_enrolment": "Currently Enrolled",
+      "sample_n": 982,
+      "unemployed_n": 622,
+      "unweighted_unemployment_rate": 0.6334,
+      "weighted_unemployment_rate": 0.6375
+    },
+    {
+      "highest_education": "Intermediate",
+      "current_enrolment": "Not Enrolled",
+      "sample_n": 2349,
+      "unemployed_n": 1240,
+      "unweighted_unemployment_rate": 0.5279,
+      "weighted_unemployment_rate": 0.5208
+    },
+    {
+      "highest_education": "Matric",
+      "current_enrolment": "Currently Enrolled",
+      "sample_n": 1501,
+      "unemployed_n": 849,
+      "unweighted_unemployment_rate": 0.5656,
+      "weighted_unemployment_rate": 0.5598
+    },
+    {
+      "highest_education": "Matric",
+      "current_enrolment": "Not Enrolled",
+      "sample_n": 4050,
+      "unemployed_n": 1737,
+      "unweighted_unemployment_rate": 0.4289,
+      "weighted_unemployment_rate": 0.4297
+    },
+    {
+      "highest_education": "Middle",
+      "current_enrolment": "Currently Enrolled",
+      "sample_n": 1237,
+      "unemployed_n": 668,
+      "unweighted_unemployment_rate": 0.54,
+      "weighted_unemployment_rate": 0.5398
+    },
+    {
+      "highest_education": "Middle",
+      "current_enrolment": "Not Enrolled",
+      "sample_n": 2993,
+      "unemployed_n": 1217,
+      "unweighted_unemployment_rate": 0.4066,
+      "weighted_unemployment_rate": 0.4115
+    },
+    {
+      "highest_education": "No Formal Education",
+      "current_enrolment": "Currently Enrolled",
+      "sample_n": 1954,
+      "unemployed_n": 786,
+      "unweighted_unemployment_rate": 0.4023,
+      "weighted_unemployment_rate": 0.398
+    },
+    {
+      "highest_education": "No Formal Education",
+      "current_enrolment": "Not Enrolled",
+      "sample_n": 5709,
+      "unemployed_n": 1440,
+      "unweighted_unemployment_rate": 0.2522,
+      "weighted_unemployment_rate": 0.2529
+    },
+    {
+      "highest_education": "Primary",
+      "current_enrolment": "Currently Enrolled",
+      "sample_n": 772,
+      "unemployed_n": 403,
+      "unweighted_unemployment_rate": 0.522,
+      "weighted_unemployment_rate": 0.5285
+    },
+    {
+      "highest_education": "Primary",
+      "current_enrolment": "Not Enrolled",
+      "sample_n": 2101,
+      "unemployed_n": 831,
+      "unweighted_unemployment_rate": 0.3955,
+      "weighted_unemployment_rate": 0.3936
+    }
+  ],
+  "vocational_training": [
+    {
+      "vocational_training_status": "Completed Prior Technical/Vocational Training",
+      "sample_n": 3620,
+      "unemployed_n": 1055,
+      "unweighted_unemployment_rate": 0.2914,
+      "weighted_unemployment_rate": 0.2947
+    },
+    {
+      "vocational_training_status": "Currently in Training",
+      "sample_n": 1169,
+      "unemployed_n": 570,
+      "unweighted_unemployment_rate": 0.4876,
+      "weighted_unemployment_rate": 0.4807
+    },
+    {
+      "vocational_training_status": "No Training",
+      "sample_n": 19067,
+      "unemployed_n": 9486,
+      "unweighted_unemployment_rate": 0.4975,
+      "weighted_unemployment_rate": 0.4971
+    },
+    {
+      "vocational_training_status": "On-the-Job Training",
+      "sample_n": 1728,
+      "unemployed_n": 0,
+      "unweighted_unemployment_rate": 0.0,
+      "weighted_unemployment_rate": 0.0
+    }
+  ],
+  "training_field_summary": [
+    {
+      "vocational_training_field": "Auto & Mechanical",
+      "sample_n": 1125,
+      "unemployed_n": 272,
+      "unweighted_unemployment_rate": 0.2418,
+      "weighted_unemployment_rate": 0.2419
+    },
+    {
+      "vocational_training_field": "Construction & Carpentry",
+      "sample_n": 1076,
+      "unemployed_n": 282,
+      "unweighted_unemployment_rate": 0.2621,
+      "weighted_unemployment_rate": 0.2637
+    },
+    {
+      "vocational_training_field": "Electrical & Electronics",
+      "sample_n": 1084,
+      "unemployed_n": 282,
+      "unweighted_unemployment_rate": 0.2601,
+      "weighted_unemployment_rate": 0.2593
+    },
+    {
+      "vocational_training_field": "Garments & Tailoring",
+      "sample_n": 1076,
+      "unemployed_n": 256,
+      "unweighted_unemployment_rate": 0.2379,
+      "weighted_unemployment_rate": 0.2316
+    },
+    {
+      "vocational_training_field": "Healthcare & Paramedical",
+      "sample_n": 1052,
+      "unemployed_n": 262,
+      "unweighted_unemployment_rate": 0.249,
+      "weighted_unemployment_rate": 0.2548
+    },
+    {
+      "vocational_training_field": "IT & Computer Skills",
+      "sample_n": 1104,
+      "unemployed_n": 271,
+      "unweighted_unemployment_rate": 0.2455,
+      "weighted_unemployment_rate": 0.2422
+    }
+  ]
+}

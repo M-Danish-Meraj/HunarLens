@@ -85,9 +85,9 @@
 ## Phase 6: Streamlit Application, Testing & Final Deliverables
 *Objective: Build the 5-view Streamlit app, verify end-to-end tests, and compile final documentation and report artifacts (§12, §16).*
 
-- [ ] **Step 6.1 — Streamlit Multi-View Dashboard (`app/streamlit_app.py`)**
+- [x] **Step 6.1 — Streamlit Multi-View Dashboard (`app/streamlit_app.py`)** *(Completed: Implemented all 5 required views in `app/streamlit_app.py` [Overview, Profile Explorer with auto Census 2023 lookup & counterfactual/global explanation charts, Population Explorer with `<30` small-cell suppression, Skills & Education Analysis, and Model Evidence & Leakage Protocol] plus precomputed safe aggregates in `reports/metrics/population_and_skills_aggregates.json`.)*
   - Implement all 5 required views: (1) Overview, (2) Profile Explorer (validated form, probability, saved threshold decision, local/global explanation chart), (3) Population Explorer, (4) Skills & Education Analysis, and (5) Model Evidence & Leakage Protocol.
-- [ ] **Step 6.2 — Application & End-to-End Tests (`tests/test_app.py`)**
+- [x] **Step 6.2 — Application & End-to-End Tests (`tests/test_app.py`)** *(Completed: Implemented and executed `tests/test_app.py` verifying frozen artifact loading, preset scoring, input domain validation, automatic Census lookup, 11 figure existence checks, and batch-vs-app prediction parity — 18/18 total repository tests passing.)*
   - Test artifact loading, input validation rules, unseen category handling, Census auto-lookup, and batch-vs-app prediction parity.
-- [ ] **Step 6.3 — Documentation, Model Card & Final Report Artifacts (`README.md`, `reports/model_card.md`, `reports/contribution_table.md`)**
+- [x] **Step 6.3 — Documentation, Model Card & Final Report Artifacts (`README.md`, `reports/model_card.md`, `reports/contribution_table.md`)** *(Completed: Finalized `README.md`, `reports/model_card.md`, and `reports/contribution_table.md` with complete reproducibility commands, measured test results, 95% PSU bootstrap CIs, and team viva allocation.)*
   - Finalize `README.md`, `reports/model_card.md`, and `reports/contribution_table.md` with complete reproducibility instructions and measured results.

@@ -497,6 +497,52 @@ def write_final_evaluation_markdown(
     out_path.write_text(content, encoding="utf-8")
 
 
+def export_safe_population_and_skills_aggregates() -> Dict[str, Any]:
+    """Build safe, non-identifying population & skills aggregates after model freeze (§7, §12.2).
+
+    Enforces `n >= 30` small-cell disclosure control and includes both unweighted sample rates and
+    survey-weighted population rates across geography, gender, education, enrolment, and vocational training.
+    """
+    cohort_df = pd.read_parquet(REPO_ROOT / "data/processed/youth_labour_force_cohort.parquet")
+    skills_df = pd.read_parquet(REPO_ROOT / "data/processed/youth_descriptive_skills.parquet")
+
+    def _agg_table(df: pd.DataFrame, group_cols: List[str]) -> List[Dict[str, Any]]:
+        rows = []
+        for keys, grp in df.groupby(group_cols, sort=True):
+            n = int(len(grp))
+            if n < SMALL_CELL_MIN_COUNT:
+                continue
+            unemp_n = int(grp["is_unemployed"].sum())
+            unw_rate = float(grp["is_unemployed"].mean())
+            w = pd.to_numeric(grp["weight"], errors="coerce").fillna(1.0)
+            w_rate = float((w * grp["is_unemployed"]).sum() / w.sum())
+            rec: Dict[str, Any] = {}
+            if isinstance(keys, tuple):
+                for c, val in zip(group_cols, keys):
+                    rec[c] = str(val)
+            else:
+                rec[group_cols[0]] = str(keys)
+            rec["sample_n"] = n
+            rec["unemployed_n"] = unemp_n
+            rec["unweighted_unemployment_rate"] = round(unw_rate, 4)
+            rec["weighted_unemployment_rate"] = round(w_rate, 4)
+            rows.append(rec)
+        return rows
+
+    payload = {
+        "small_cell_min_count": SMALL_CELL_MIN_COUNT,
+        "total_eligible_cohort_n": int(len(cohort_df)),
+        "province_locality_sex": _agg_table(cohort_df, ["province_territory", "locality", "sex"]),
+        "education_enrolment": _agg_table(cohort_df, ["highest_education", "current_enrolment"]),
+        "vocational_training": _agg_table(skills_df, ["vocational_training_status"]),
+        "training_field_summary": _agg_table(skills_df, ["vocational_training_field"]),
+    }
+    out_path = REPO_ROOT / "reports/metrics/population_and_skills_aggregates.json"
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    out_path.write_text(json.dumps(payload, indent=2), encoding="utf-8")
+    return payload
+
+
 def run_single_batch_test_evaluation(
     data_cfg_path: str | Path = "configs/data.yaml",
     exp_cfg_path: str | Path = "configs/experiments.yaml",
@@ -620,5 +666,6 @@ def run_single_batch_test_evaluation(
     )
 
     write_final_evaluation_markdown(payload, REPO_ROOT / "docs/final_evaluation_report.md")
+    export_safe_population_and_skills_aggregates()
     return payload
 
