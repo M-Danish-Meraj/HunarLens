@@ -1,0 +1,158 @@
+# HunarLens — 15-Predictor Contract, Transformations & Forbidden Leakage Denylist
+# Reference: PROJECT_PLAN.md §5.2, §5.3, §8
+
+target:
+  name: "is_unemployed"
+  positive_label: 1
+  description: "Binary indicator of current survey-defined unemployment (1=unemployed, 0=employed) among youth aged 15-24 in the labour force."
+
+# Approved 15-feature core before one-hot encoding (§5.2)
+predictors:
+  numeric:
+    - name: "age"
+      source: "LFS"
+      dtype: "int64"
+      min_value: 15
+      max_value: 24
+      imputation: "median"
+      scale_for_linear: true
+      description: "Age in completed years (enforced 15-24)."
+    - name: "household_size"
+      source: "LFS_roster"
+      dtype: "int64"
+      min_value: 1
+      max_value: 50
+      imputation: "median"
+      scale_for_linear: true
+      description: "Complete usual-resident household size across all ages."
+    - name: "household_dependency_ratio"
+      source: "LFS_roster_derived"
+      dtype: "float64"
+      min_value: 0.0
+      max_value: 20.0
+      imputation: "median"
+      scale_for_linear: true
+      description: "(Members aged <15 or >=65) / (Members aged 15-64), computed from household demographics."
+    - name: "regional_pop_density_log1p"
+      raw_column: "regional_pop_density"
+      source: "Census_2023"
+      dtype: "float64"
+      transform: "log1p"
+      imputation: "median"
+      scale_for_linear: true
+      description: "Log1p-transformed regional population density (persons per sq. km) from Census 2023."
+    - name: "regional_urban_share"
+      source: "Census_2023"
+      dtype: "float64"
+      min_value: 0.0
+      max_value: 1.0
+      imputation: "median"
+      scale_for_linear: true
+      description: "Regional urban population share (fraction 0-1) from Census 2023."
+    - name: "regional_avg_household_size"
+      source: "Census_2023"
+      dtype: "float64"
+      min_value: 1.0
+      max_value: 15.0
+      imputation: "median"
+      scale_for_linear: true
+      description: "Regional average household size from Census 2023 Table 1."
+
+  categorical:
+    - name: "sex"
+      source: "LFS"
+      allowed_values: ["Male", "Female"]
+      missing_strategy: "explicit_unknown"
+      description: "Recorded sex/gender category."
+    - name: "marital_status"
+      source: "LFS"
+      allowed_values: ["Never Married", "Currently Married", "Widowed/Divorced"]
+      missing_strategy: "explicit_unknown"
+      description: "Marital status category."
+    - name: "relationship_to_head"
+      source: "LFS"
+      allowed_values: ["Head", "Spouse", "Son/Daughter", "Other Relative", "Non-Relative"]
+      missing_strategy: "explicit_unknown"
+      description: "Relationship to household head."
+    - name: "can_read"
+      source: "LFS"
+      allowed_values: ["Yes", "No", "Unknown"]
+      missing_strategy: "explicit_unknown"
+      description: "Can read a simple statement with understanding."
+    - name: "can_write"
+      source: "LFS"
+      allowed_values: ["Yes", "No", "Unknown"]
+      missing_strategy: "explicit_unknown"
+      description: "Can write a simple statement with understanding."
+    - name: "highest_education"
+      source: "LFS"
+      allowed_values:
+        - "No Formal Education"
+        - "Primary"
+        - "Middle"
+        - "Matric"
+        - "Intermediate"
+        - "Degree & Postgraduate"
+      missing_strategy: "explicit_unknown"
+      description: "Highest completed formal education category (non-ordinal categorical)."
+    - name: "current_enrolment"
+      source: "LFS"
+      allowed_values: ["Not Enrolled", "Currently Enrolled"]
+      missing_strategy: "explicit_unknown"
+      description: "Current educational attendance/enrolment status."
+    - name: "province_territory"
+      source: "LFS_PCode"
+      allowed_values:
+        - "Khyber Pakhtunkhwa"
+        - "Punjab"
+        - "Sindh"
+        - "Balochistan"
+        - "Islamabad"
+      missing_strategy: "reject_invalid"
+      description: "Verified province or federal territory derived from PCode."
+    - name: "locality"
+      source: "LFS"
+      allowed_values: ["Rural", "Urban"]
+      missing_strategy: "reject_invalid"
+      description: "Urban or rural locality classification."
+
+# Descriptive-only fields (retained ONLY for the non-predictive Skills & Education tab, §5.3 & §11)
+descriptive_only_fields:
+  - "vocational_training_status"
+  - "vocational_training_field"
+  - "training_duration_Category"
+
+# Explicit forbidden predictors — must NEVER enter the feature pipeline (§5.3)
+forbidden_denylist:
+  # Administrative & survey design identifiers
+  - "PCode"
+  - "HHNo"
+  - "SNo"
+  - "person_id"
+  - "household_id"
+  - "psu_id"
+  - "row_id"
+  - "weight"
+  - "Fstatus"
+  # Target-defining & post-outcome employment variables
+  - "is_unemployed"
+  - "labour_force_status"
+  - "worked_last_week"
+  - "temp_absent_from_work"
+  - "seeking_work"
+  - "available_for_work"
+  - "unemployment_duration"
+  - "reason_not_working"
+  - "hours_worked"
+  - "monthly_earnings"
+  - "occupation_code"
+  - "industry_code"
+  - "employment_status_category"
+  - "job_tenure"
+  - "contract_type"
+  - "employer_sector"
+  - "migration_reason"
+  # Job-timed vocational training fields (excluded due to post-outcome timing risk, §5.3)
+  - "vocational_training_status"
+  - "vocational_training_field"
+  - "training_timing_code"

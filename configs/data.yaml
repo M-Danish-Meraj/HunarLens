@@ -1,0 +1,72 @@
+# HunarLens — Data Acquisition, Cohort & Identifier Configuration
+# Reference: PROJECT_PLAN.md §1, §4, §5.1, §6.2
+
+dataset:
+  name: "PBS Labour Force Survey (LFS) 2024-25 + Pakistan Census 2023 Regional Context"
+  survey_period: "2024-25"
+  census_year: 2023
+  minimum_eligible_rows: 5000
+  minimum_predictors: 15
+
+paths:
+  raw_dir: "data/raw"
+  raw_lfs_file: "data/raw/lfs_2024_25_microdata.csv"
+  census_reference_file: "data/reference/census_2023_regional.csv"
+  source_manifest_file: "data/source_manifest.csv"
+  processed_dir: "data/processed"
+  eligible_cohort_file: "data/processed/youth_labour_force_cohort.parquet"
+  descriptive_skills_file: "data/processed/youth_descriptive_skills.parquet"
+  splits_dir: "data/splits"
+  split_manifest_file: "data/splits/split_manifest.json"
+  data_audit_report: "docs/data_audit.md"
+  split_audit_report: "docs/split_audit.md"
+
+identifiers:
+  psu_key: "PCode"                 # 8-digit Primary Sampling Unit code (primary grouping unit)
+  household_keys:                  # Composite household candidate key
+    - "PCode"
+    - "HHNo"
+  person_keys:                     # Unique person candidate key
+    - "PCode"
+    - "HHNo"
+    - "SNo"
+  survey_weight_col: "weight"      # Kept strictly outside predictors; used only for population summaries
+
+geography:
+  # First digit of 8-digit PCode distinguishes Islamabad from Punjab (§1 Data-intake update)
+  pcode_first_digit_map:
+    "1": "Khyber Pakhtunkhwa"
+    "2": "Punjab"
+    "3": "Sindh"
+    "4": "Balochistan"
+    "6": "Islamabad"
+  supported_provinces:
+    - "Khyber Pakhtunkhwa"
+    - "Punjab"
+    - "Sindh"
+    - "Balochistan"
+    - "Islamabad"
+  supported_localities:
+    - "Rural"
+    - "Urban"
+  census_join_key: "province_territory"
+  census_join_cardinality: "many_to_one"
+
+cohort_eligibility:
+  min_age: 15
+  max_age: 24
+  working_age_min: 15
+  working_age_max: 64
+  framework: "19th_ICLS"
+  target_column: "is_unemployed"
+  positive_class: 1                # 1 = Unemployed, 0 = Employed
+  valid_labour_force_statuses:
+    - "employed"
+    - "unemployed"
+  excluded_statuses:
+    - "outside_labour_force"
+    - "unresolved_or_missing"
+    - "age_out_of_range"
+
+disclosure_control:
+  small_cell_min_count: 30         # Suppress subgroup summaries with fewer than 30 observations (§7)
