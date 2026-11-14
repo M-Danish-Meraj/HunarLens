@@ -21,7 +21,7 @@
   - Create standard directory tree (`configs/`, `data/{raw,reference,processed,splits}`, `notebooks/`, `src/hunarlens/`, `scripts/`, `app/`, `models/`, `reports/{figures,metrics}`, `tests/`, `docs/`).
   - Add `.gitignore` protecting private microdata (`data/raw/`, `data/processed/`, `data/splits/*.parquet`) while tracking manifests and reference tables.
   - Create `requirements.txt`, `requirements-dev.txt`, and `src/hunarlens/__init__.py`.
-- [ ] **Step 1.2 — Declarative YAML Configurations (`configs/`)**
+- [x] **Step 1.2 — Declarative YAML Configurations (`configs/`)** *(Completed: Created `configs/data.yaml`, `configs/features.yaml`, and `configs/experiments.yaml` encoding PSU/household/person keys, the 15-feature contract, explicit leakage denylist, 70/15/15 split seeds 42/43/44, 5-fold StratifiedGroupKFold search spaces, ablations, and validation threshold policy.)*
   - Create `configs/data.yaml` (LFS 2024–25 & Census 2023 paths, PSU/household/person keys, age 15–24 filter).
   - Create `configs/features.yaml` (15 approved predictors, explicit forbidden/leakage denylist, data types, transformations).
   - Create `configs/experiments.yaml` (seeds 42/43/44, 70/15/15 split ratios, 5-fold `StratifiedGroupKFold`, hyperparameter grids for Dummy, Logistic Regression, Random Forest, and Gradient Boosting, threshold policy).
@@ -35,7 +35,7 @@
 ## Phase 2: Data Ingestion, Census Crosswalk & Target Construction
 *Objective: Implement modular source loading, household roster derivation, Census regional join, and strict binary label construction (§4, §5).*
 
-- [ ] **Step 2.1 — Census Reference Table & Geographic Crosswalk (`data/reference/`, `src/hunarlens/data.py`)**
+- [x] **Step 2.1 — Census Reference Table & Geographic Crosswalk (`data/reference/`, `src/hunarlens/data.py`)** *(Completed: Created `data/reference/census_2023_regional.csv` with PBS Census 2023 Table-1 indicators for all 5 regions and implemented `src/hunarlens/data.py` with identifier normalization/deduplication, `PCode` digit-1 province resolution, pre-filter household roster aggregation, and verified `many-to-one` Census join assertions.)*
   - Create verified province/territory & regional Census 2023 lookup table (`data/reference/census_2023_regional.csv`).
   - Implement `src/hunarlens/data.py` with schema validation, identifier recovery (`PCode`, `HHNo`, `SNo`), household roster aggregation (size and age-dependency ratio before youth filtering), and many-to-one Census join assertions.
 - [ ] **Step 2.2 — Target Label Construction & Eligibility Module (`src/hunarlens/labels.py`)**

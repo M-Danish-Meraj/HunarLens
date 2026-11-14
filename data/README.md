@@ -41,3 +41,4 @@ This directory stores source manifests, approved external reference tables, and 
   2. `regional_urban_share`: Proportion of population residing in urban areas (`0.0` to `1.0`).
   3. `regional_avg_household_size`: Regional average household size (distinct from the individual respondent's household size).
 * **Crosswalk & Join Rule:** Stored in `data/reference/census_2023_regional.csv` keyed by verified `province_territory` (5 units: Khyber Pakhtunkhwa, Punjab, Sindh, Balochistan, Islamabad). Joined to LFS person records via a verified **many-to-one** relationship with strict row-count invariance assertions (§4.2).
+

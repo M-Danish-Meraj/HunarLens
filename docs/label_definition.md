@@ -63,3 +63,4 @@ Evaluated in strict precedence order using the LFS activity, job-search, and ava
 | **Ex-4** | 18 | `0` (No) | `0` (No) | `1` (Yes) | `1` (Yes) | `Currently Enrolled` | `unemployed` | `1` |
 | **Ex-5** | 17 | `0` (No) | `0` (No) | `0` (No) | `0` (No) | `Currently Enrolled` | `outside_labour_force` | *Excluded* |
 | **Ex-6** | 22 | `NaN` | `NaN` | `1` (Yes) | `NaN` | `Not Enrolled` | `unresolved_or_missing` | *Excluded* |
+

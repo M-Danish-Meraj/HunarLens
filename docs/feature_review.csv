@@ -32,3 +32,4 @@ industry_code,REJECTED,Post-Outcome Leakage,LFS 2024-25,categorical,Excluded fro
 migration_reason,REJECTED,Target Proxy Leakage,LFS 2024-25,categorical,Excluded from predictors,Excluded,"Includes 'found a job' or 'searching for work' categories that act as direct outcome proxies (§5.3)."
 vocational_training_status,REJECTED_FROM_MODEL_DESCRIPTIVE_ONLY,Descriptive Skills Module Only,LFS 2024-25,categorical,Excluded from classifier; used in Skills Tab,Descriptive explorer only,"Distinguishes on-the-job vs prior training; excluded from classifier to prevent job-timed leakage (§5.3)."
 vocational_training_field,REJECTED_FROM_MODEL_DESCRIPTIVE_ONLY,Descriptive Skills Module Only,LFS 2024-25,categorical,Excluded from classifier; used in Skills Tab,Descriptive explorer only,"Preserved strictly for descriptive skills/training participation analysis in the Streamlit app (§5.3, §11)."
+

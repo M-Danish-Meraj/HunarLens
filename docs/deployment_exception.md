@@ -23,3 +23,4 @@ Prior to implementation planning (recorded on 13 November 2026 in [PROJECT_PLAN.
 - [x] Automatic regional Census 2023 covariate lookup by selected `province_territory` (users never manually type regional density or urban share).
 - [x] Explicit display of the frozen validation-selected decision threshold alongside the predicted positive-class probability.
 - [x] Automated test suite (`tests/test_app.py`) verifying artifact loading, input validation, unseen category safety, and batch-vs-app prediction parity.
+
