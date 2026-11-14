@@ -1,0 +1,898 @@
+{
+  "evaluation_status": "ONE_TIME_FROZEN_TEST_EVALUATION_COMPLETE",
+  "winner_model_key": "gradient_boosting",
+  "winner_display_name": "Gradient Boosting",
+  "winner_frozen_threshold": 0.37,
+  "test_row_count": 3860,
+  "test_psu_count": 270,
+  "test_positive_support": 1717,
+  "test_prevalence": 0.444819,
+  "models": {
+    "dummy_prior": {
+      "display_name": "Dummy Baseline (Prior / Majority)",
+      "is_baseline": true,
+      "train_cv_ap_mean": 0.432424,
+      "train_cv_ap_std": 0.000483,
+      "frozen_validation_threshold": 0.5,
+      "validation_f1_at_threshold": 0.0,
+      "validation_ap": 0.432432,
+      "test_metrics_at_frozen_threshold": {
+        "threshold": 0.5,
+        "n_samples": 3860,
+        "positive_support": 1717,
+        "prevalence": 0.444819,
+        "f1_pos": 0.0,
+        "precision_pos": 0.0,
+        "recall_pos": 0.0,
+        "average_precision": 0.444819,
+        "ap_lift_over_prevalence": 1.0,
+        "roc_auc": 0.5,
+        "brier_score": 0.247109,
+        "confusion_matrix": {
+          "labels": [
+            "Employed (0)",
+            "Unemployed (1)"
+          ],
+          "counts": [
+            [
+              2143,
+              0
+            ],
+            [
+              1717,
+              0
+            ]
+          ],
+          "tn": 2143,
+          "fp": 0,
+          "fn": 1717,
+          "tp": 0,
+          "row_normalized": [
+            [
+              1.0,
+              0.0
+            ],
+            [
+              1.0,
+              0.0
+            ]
+          ]
+        }
+      },
+      "test_metrics_at_default_05_threshold": {
+        "threshold": 0.5,
+        "n_samples": 3860,
+        "positive_support": 1717,
+        "prevalence": 0.444819,
+        "f1_pos": 0.0,
+        "precision_pos": 0.0,
+        "recall_pos": 0.0,
+        "average_precision": 0.444819,
+        "ap_lift_over_prevalence": 1.0,
+        "roc_auc": 0.5,
+        "brier_score": 0.247109,
+        "confusion_matrix": {
+          "labels": [
+            "Employed (0)",
+            "Unemployed (1)"
+          ],
+          "counts": [
+            [
+              2143,
+              0
+            ],
+            [
+              1717,
+              0
+            ]
+          ],
+          "tn": 2143,
+          "fp": 0,
+          "fn": 1717,
+          "tp": 0,
+          "row_normalized": [
+            [
+              1.0,
+              0.0
+            ],
+            [
+              1.0,
+              0.0
+            ]
+          ]
+        }
+      }
+    },
+    "dummy_all_positive": {
+      "display_name": "Dummy Baseline (All-Positive / Unemployed)",
+      "is_baseline": true,
+      "train_cv_ap_mean": 0.432424,
+      "train_cv_ap_std": 0.000483,
+      "frozen_validation_threshold": 0.5,
+      "validation_f1_at_threshold": 0.603774,
+      "validation_ap": 0.432432,
+      "test_metrics_at_frozen_threshold": {
+        "threshold": 0.5,
+        "n_samples": 3860,
+        "positive_support": 1717,
+        "prevalence": 0.444819,
+        "f1_pos": 0.615743,
+        "precision_pos": 0.444819,
+        "recall_pos": 1.0,
+        "average_precision": 0.444819,
+        "ap_lift_over_prevalence": 1.0,
+        "roc_auc": 0.5,
+        "brier_score": 0.555181,
+        "confusion_matrix": {
+          "labels": [
+            "Employed (0)",
+            "Unemployed (1)"
+          ],
+          "counts": [
+            [
+              0,
+              2143
+            ],
+            [
+              0,
+              1717
+            ]
+          ],
+          "tn": 0,
+          "fp": 2143,
+          "fn": 0,
+          "tp": 1717,
+          "row_normalized": [
+            [
+              0.0,
+              1.0
+            ],
+            [
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      },
+      "test_metrics_at_default_05_threshold": {
+        "threshold": 0.5,
+        "n_samples": 3860,
+        "positive_support": 1717,
+        "prevalence": 0.444819,
+        "f1_pos": 0.615743,
+        "precision_pos": 0.444819,
+        "recall_pos": 1.0,
+        "average_precision": 0.444819,
+        "ap_lift_over_prevalence": 1.0,
+        "roc_auc": 0.5,
+        "brier_score": 0.555181,
+        "confusion_matrix": {
+          "labels": [
+            "Employed (0)",
+            "Unemployed (1)"
+          ],
+          "counts": [
+            [
+              0,
+              2143
+            ],
+            [
+              0,
+              1717
+            ]
+          ],
+          "tn": 0,
+          "fp": 2143,
+          "fn": 0,
+          "tp": 1717,
+          "row_normalized": [
+            [
+              0.0,
+              1.0
+            ],
+            [
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      }
+    },
+    "logistic_regression": {
+      "display_name": "Logistic Regression",
+      "is_baseline": false,
+      "train_cv_ap_mean": 0.633185,
+      "train_cv_ap_std": 0.010671,
+      "frozen_validation_threshold": 0.34,
+      "validation_f1_at_threshold": 0.637139,
+      "validation_ap": 0.632714,
+      "test_metrics_at_frozen_threshold": {
+        "threshold": 0.34,
+        "n_samples": 3860,
+        "positive_support": 1717,
+        "prevalence": 0.444819,
+        "f1_pos": 0.652174,
+        "precision_pos": 0.548708,
+        "recall_pos": 0.803727,
+        "average_precision": 0.646616,
+        "ap_lift_over_prevalence": 1.4537,
+        "roc_auc": 0.704564,
+        "brier_score": 0.216176,
+        "confusion_matrix": {
+          "labels": [
+            "Employed (0)",
+            "Unemployed (1)"
+          ],
+          "counts": [
+            [
+              1008,
+              1135
+            ],
+            [
+              337,
+              1380
+            ]
+          ],
+          "tn": 1008,
+          "fp": 1135,
+          "fn": 337,
+          "tp": 1380,
+          "row_normalized": [
+            [
+              0.4704,
+              0.5296
+            ],
+            [
+              0.1963,
+              0.8037
+            ]
+          ]
+        }
+      },
+      "test_metrics_at_default_05_threshold": {
+        "threshold": 0.5,
+        "n_samples": 3860,
+        "positive_support": 1717,
+        "prevalence": 0.444819,
+        "f1_pos": 0.554611,
+        "precision_pos": 0.632364,
+        "recall_pos": 0.493885,
+        "average_precision": 0.646616,
+        "ap_lift_over_prevalence": 1.4537,
+        "roc_auc": 0.704564,
+        "brier_score": 0.216176,
+        "confusion_matrix": {
+          "labels": [
+            "Employed (0)",
+            "Unemployed (1)"
+          ],
+          "counts": [
+            [
+              1650,
+              493
+            ],
+            [
+              869,
+              848
+            ]
+          ],
+          "tn": 1650,
+          "fp": 493,
+          "fn": 869,
+          "tp": 848,
+          "row_normalized": [
+            [
+              0.7699,
+              0.2301
+            ],
+            [
+              0.5061,
+              0.4939
+            ]
+          ]
+        }
+      }
+    },
+    "random_forest": {
+      "display_name": "Random Forest",
+      "is_baseline": false,
+      "train_cv_ap_mean": 0.627533,
+      "train_cv_ap_std": 0.013306,
+      "frozen_validation_threshold": 0.37,
+      "validation_f1_at_threshold": 0.632356,
+      "validation_ap": 0.63393,
+      "test_metrics_at_frozen_threshold": {
+        "threshold": 0.37,
+        "n_samples": 3860,
+        "positive_support": 1717,
+        "prevalence": 0.444819,
+        "f1_pos": 0.647541,
+        "precision_pos": 0.514217,
+        "recall_pos": 0.874199,
+        "average_precision": 0.642817,
+        "ap_lift_over_prevalence": 1.4451,
+        "roc_auc": 0.698514,
+        "brier_score": 0.220024,
+        "confusion_matrix": {
+          "labels": [
+            "Employed (0)",
+            "Unemployed (1)"
+          ],
+          "counts": [
+            [
+              725,
+              1418
+            ],
+            [
+              216,
+              1501
+            ]
+          ],
+          "tn": 725,
+          "fp": 1418,
+          "fn": 216,
+          "tp": 1501,
+          "row_normalized": [
+            [
+              0.3383,
+              0.6617
+            ],
+            [
+              0.1258,
+              0.8742
+            ]
+          ]
+        }
+      },
+      "test_metrics_at_default_05_threshold": {
+        "threshold": 0.5,
+        "n_samples": 3860,
+        "positive_support": 1717,
+        "prevalence": 0.444819,
+        "f1_pos": 0.616765,
+        "precision_pos": 0.594595,
+        "recall_pos": 0.640652,
+        "average_precision": 0.642817,
+        "ap_lift_over_prevalence": 1.4451,
+        "roc_auc": 0.698514,
+        "brier_score": 0.220024,
+        "confusion_matrix": {
+          "labels": [
+            "Employed (0)",
+            "Unemployed (1)"
+          ],
+          "counts": [
+            [
+              1393,
+              750
+            ],
+            [
+              617,
+              1100
+            ]
+          ],
+          "tn": 1393,
+          "fp": 750,
+          "fn": 617,
+          "tp": 1100,
+          "row_normalized": [
+            [
+              0.65,
+              0.35
+            ],
+            [
+              0.3593,
+              0.6407
+            ]
+          ]
+        }
+      }
+    },
+    "gradient_boosting": {
+      "display_name": "Gradient Boosting",
+      "is_baseline": false,
+      "train_cv_ap_mean": 0.633836,
+      "train_cv_ap_std": 0.012822,
+      "frozen_validation_threshold": 0.37,
+      "validation_f1_at_threshold": 0.635835,
+      "validation_ap": 0.634688,
+      "test_metrics_at_frozen_threshold": {
+        "threshold": 0.37,
+        "n_samples": 3860,
+        "positive_support": 1717,
+        "prevalence": 0.444819,
+        "f1_pos": 0.649532,
+        "precision_pos": 0.552739,
+        "recall_pos": 0.78742,
+        "average_precision": 0.651073,
+        "ap_lift_over_prevalence": 1.4637,
+        "roc_auc": 0.706511,
+        "brier_score": 0.21645,
+        "confusion_matrix": {
+          "labels": [
+            "Employed (0)",
+            "Unemployed (1)"
+          ],
+          "counts": [
+            [
+              1049,
+              1094
+            ],
+            [
+              365,
+              1352
+            ]
+          ],
+          "tn": 1049,
+          "fp": 1094,
+          "fn": 365,
+          "tp": 1352,
+          "row_normalized": [
+            [
+              0.4895,
+              0.5105
+            ],
+            [
+              0.2126,
+              0.7874
+            ]
+          ]
+        }
+      },
+      "test_metrics_at_default_05_threshold": {
+        "threshold": 0.5,
+        "n_samples": 3860,
+        "positive_support": 1717,
+        "prevalence": 0.444819,
+        "f1_pos": 0.535714,
+        "precision_pos": 0.635492,
+        "recall_pos": 0.463017,
+        "average_precision": 0.651073,
+        "ap_lift_over_prevalence": 1.4637,
+        "roc_auc": 0.706511,
+        "brier_score": 0.21645,
+        "confusion_matrix": {
+          "labels": [
+            "Employed (0)",
+            "Unemployed (1)"
+          ],
+          "counts": [
+            [
+              1687,
+              456
+            ],
+            [
+              922,
+              795
+            ]
+          ],
+          "tn": 1687,
+          "fp": 456,
+          "fn": 922,
+          "tp": 795,
+          "row_normalized": [
+            [
+              0.7872,
+              0.2128
+            ],
+            [
+              0.537,
+              0.463
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "bootstrap_95ci": {
+    "n_resamples_requested": 1000,
+    "n_valid_resamples": 1000,
+    "invalid_single_class_resamples": 0,
+    "independent_test_psus": 270,
+    "model_intervals": {
+      "dummy_prior": {
+        "f1_pos": {
+          "mean": 0.0,
+          "std": 0.0,
+          "ci95_low": 0.0,
+          "ci95_high": 0.0
+        },
+        "average_precision": {
+          "mean": 0.445011,
+          "std": 0.009771,
+          "ci95_low": 0.426296,
+          "ci95_high": 0.463974
+        }
+      },
+      "dummy_all_positive": {
+        "f1_pos": {
+          "mean": 0.615864,
+          "std": 0.009356,
+          "ci95_low": 0.597766,
+          "ci95_high": 0.633855
+        },
+        "average_precision": {
+          "mean": 0.445011,
+          "std": 0.009771,
+          "ci95_low": 0.426296,
+          "ci95_high": 0.463974
+        }
+      },
+      "logistic_regression": {
+        "f1_pos": {
+          "mean": 0.652277,
+          "std": 0.009755,
+          "ci95_low": 0.632674,
+          "ci95_high": 0.671863
+        },
+        "average_precision": {
+          "mean": 0.647084,
+          "std": 0.013505,
+          "ci95_low": 0.621919,
+          "ci95_high": 0.674763
+        }
+      },
+      "random_forest": {
+        "f1_pos": {
+          "mean": 0.647712,
+          "std": 0.009709,
+          "ci95_low": 0.627977,
+          "ci95_high": 0.667366
+        },
+        "average_precision": {
+          "mean": 0.643346,
+          "std": 0.013811,
+          "ci95_low": 0.616978,
+          "ci95_high": 0.671134
+        }
+      },
+      "gradient_boosting": {
+        "f1_pos": {
+          "mean": 0.6497,
+          "std": 0.010139,
+          "ci95_low": 0.630697,
+          "ci95_high": 0.670106
+        },
+        "average_precision": {
+          "mean": 0.651523,
+          "std": 0.013203,
+          "ci95_low": 0.626709,
+          "ci95_high": 0.678224
+        }
+      }
+    },
+    "winner_paired_differences": {
+      "winner_minus_dummy_prior_f1": {
+        "mean": 0.6497,
+        "std": 0.010139,
+        "ci95_low": 0.630697,
+        "ci95_high": 0.670106
+      },
+      "winner_minus_dummy_all_positive_f1": {
+        "mean": 0.033835,
+        "std": 0.007147,
+        "ci95_low": 0.020006,
+        "ci95_high": 0.048065
+      },
+      "winner_minus_dummy_prior_ap": {
+        "mean": 0.206512,
+        "std": 0.010688,
+        "ci95_low": 0.187045,
+        "ci95_high": 0.228042
+      }
+    }
+  },
+  "subgroup_and_weighted_audit": {
+    "small_cell_min_count": 30,
+    "subgroups": [
+      {
+        "dimension": "Sex / Gender",
+        "column": "sex",
+        "subgroup": "Male",
+        "n": 2483,
+        "positive_support": 1013,
+        "suppressed": false,
+        "prevalence": 0.407974,
+        "f1_pos": 0.613174,
+        "precision_pos": 0.514745,
+        "recall_pos": 0.758144,
+        "average_precision": 0.586312,
+        "roc_auc": 0.68877,
+        "brier_score": 0.217339
+      },
+      {
+        "dimension": "Sex / Gender",
+        "column": "sex",
+        "subgroup": "Female",
+        "n": 1377,
+        "positive_support": 704,
+        "suppressed": false,
+        "prevalence": 0.511256,
+        "f1_pos": 0.704463,
+        "precision_pos": 0.612159,
+        "recall_pos": 0.829545,
+        "average_precision": 0.721904,
+        "roc_auc": 0.721991,
+        "brier_score": 0.214846
+      },
+      {
+        "dimension": "Age Group (15\u201319 vs. 20\u201324)",
+        "column": "age_band",
+        "subgroup": "20-24 (Young Adult)",
+        "n": 1887,
+        "positive_support": 786,
+        "suppressed": false,
+        "prevalence": 0.416534,
+        "f1_pos": 0.633898,
+        "precision_pos": 0.570122,
+        "recall_pos": 0.71374,
+        "average_precision": 0.660483,
+        "roc_auc": 0.727419,
+        "brier_score": 0.205908
+      },
+      {
+        "dimension": "Age Group (15\u201319 vs. 20\u201324)",
+        "column": "age_band",
+        "subgroup": "15-19 (Teen Youth)",
+        "n": 1973,
+        "positive_support": 931,
+        "suppressed": false,
+        "prevalence": 0.47187,
+        "f1_pos": 0.661095,
+        "precision_pos": 0.54104,
+        "recall_pos": 0.849624,
+        "average_precision": 0.639021,
+        "roc_auc": 0.679941,
+        "brier_score": 0.226532
+      },
+      {
+        "dimension": "Urban / Rural Locality",
+        "column": "locality",
+        "subgroup": "Urban",
+        "n": 1533,
+        "positive_support": 825,
+        "suppressed": false,
+        "prevalence": 0.53816,
+        "f1_pos": 0.718586,
+        "precision_pos": 0.59306,
+        "recall_pos": 0.911515,
+        "average_precision": 0.710699,
+        "roc_auc": 0.685714,
+        "brier_score": 0.223352
+      },
+      {
+        "dimension": "Urban / Rural Locality",
+        "column": "locality",
+        "subgroup": "Rural",
+        "n": 2327,
+        "positive_support": 892,
+        "suppressed": false,
+        "prevalence": 0.383326,
+        "f1_pos": 0.57971,
+        "precision_pos": 0.509338,
+        "recall_pos": 0.672646,
+        "average_precision": 0.578198,
+        "roc_auc": 0.691424,
+        "brier_score": 0.211903
+      },
+      {
+        "dimension": "Province / Territory",
+        "column": "province_territory",
+        "subgroup": "Punjab",
+        "n": 1680,
+        "positive_support": 740,
+        "suppressed": false,
+        "prevalence": 0.440476,
+        "f1_pos": 0.660501,
+        "precision_pos": 0.552823,
+        "recall_pos": 0.82027,
+        "average_precision": 0.663857,
+        "roc_auc": 0.719991,
+        "brier_score": 0.212712
+      },
+      {
+        "dimension": "Province / Territory",
+        "column": "province_territory",
+        "subgroup": "Sindh",
+        "n": 868,
+        "positive_support": 360,
+        "suppressed": false,
+        "prevalence": 0.414747,
+        "f1_pos": 0.613365,
+        "precision_pos": 0.537657,
+        "recall_pos": 0.713889,
+        "average_precision": 0.59647,
+        "roc_auc": 0.689324,
+        "brier_score": 0.217952
+      },
+      {
+        "dimension": "Province / Territory",
+        "column": "province_territory",
+        "subgroup": "Balochistan",
+        "n": 389,
+        "positive_support": 134,
+        "suppressed": false,
+        "prevalence": 0.344473,
+        "f1_pos": 0.510791,
+        "precision_pos": 0.493056,
+        "recall_pos": 0.529851,
+        "average_precision": 0.550556,
+        "roc_auc": 0.680012,
+        "brier_score": 0.20377
+      },
+      {
+        "dimension": "Province / Territory",
+        "column": "province_territory",
+        "subgroup": "Islamabad",
+        "n": 322,
+        "positive_support": 178,
+        "suppressed": false,
+        "prevalence": 0.552795,
+        "f1_pos": 0.714286,
+        "precision_pos": 0.592593,
+        "recall_pos": 0.898876,
+        "average_precision": 0.731143,
+        "roc_auc": 0.675893,
+        "brier_score": 0.224941
+      },
+      {
+        "dimension": "Province / Territory",
+        "column": "province_territory",
+        "subgroup": "Khyber Pakhtunkhwa",
+        "n": 601,
+        "positive_support": 305,
+        "suppressed": false,
+        "prevalence": 0.507488,
+        "f1_pos": 0.675427,
+        "precision_pos": 0.563596,
+        "recall_pos": 0.842623,
+        "average_precision": 0.666402,
+        "roc_auc": 0.675404,
+        "brier_score": 0.228385
+      }
+    ],
+    "survey_weighted_sensitivity": {
+      "note": "Separately labelled survey-weighted test sensitivity summary (same frozen predictions & threshold).",
+      "weighted_prevalence": 0.438391,
+      "weighted_f1_pos": 0.642634,
+      "weighted_precision_pos": 0.545533,
+      "weighted_recall_pos": 0.781787,
+      "weighted_average_precision": 0.641943,
+      "weighted_roc_auc": 0.703362,
+      "weighted_brier_score": 0.21654
+    }
+  },
+  "global_permutation_importance": {
+    "method": "validation_permutation_importance",
+    "scoring": "average_precision",
+    "figure_path": "reports\\figures\\08_global_permutation_importance.png",
+    "features": [
+      {
+        "feature": "highest_education",
+        "display_label": "Highest Formal Education",
+        "importance_mean": 0.06258432001522582,
+        "importance_std": 0.008122557416205262,
+        "importance_min": 0.051581295979971076,
+        "importance_max": 0.07646082185675551
+      },
+      {
+        "feature": "sex",
+        "display_label": "Sex / Gender",
+        "importance_mean": 0.03622081644833634,
+        "importance_std": 0.005561214604735381,
+        "importance_min": 0.026127233751199186,
+        "importance_max": 0.04533482688752588
+      },
+      {
+        "feature": "locality",
+        "display_label": "Urban / Rural Locality",
+        "importance_mean": 0.031403001637227757,
+        "importance_std": 0.00372251464481731,
+        "importance_min": 0.026346329411853664,
+        "importance_max": 0.03568534480967245
+      },
+      {
+        "feature": "current_enrolment",
+        "display_label": "Current Educational Enrolment",
+        "importance_mean": 0.020758498783645007,
+        "importance_std": 0.0037594776583584526,
+        "importance_min": 0.013669617228812103,
+        "importance_max": 0.025829257011323548
+      },
+      {
+        "feature": "regional_pop_density_log1p",
+        "display_label": "Census 2023 Regional Pop. Density (log1p)",
+        "importance_mean": 0.016384115329395467,
+        "importance_std": 0.0026179518360276745,
+        "importance_min": 0.012499921907209832,
+        "importance_max": 0.02131518696151835
+      },
+      {
+        "feature": "marital_status",
+        "display_label": "Marital Status",
+        "importance_mean": 0.00997283965066692,
+        "importance_std": 0.003118819805787238,
+        "importance_min": 0.005481446096000431,
+        "importance_max": 0.01635672220541584
+      },
+      {
+        "feature": "age",
+        "display_label": "Age (Completed Years, 15\u201324)",
+        "importance_mean": 0.006933904980989947,
+        "importance_std": 0.0017365884147812725,
+        "importance_min": 0.003796022032642732,
+        "importance_max": 0.008940618933208744
+      },
+      {
+        "feature": "can_read",
+        "display_label": "Literacy: Can Read",
+        "importance_mean": 0.005702309802840755,
+        "importance_std": 0.003115247837794403,
+        "importance_min": 0.0018184625029357138,
+        "importance_max": 0.01284193429273539
+      },
+      {
+        "feature": "household_dependency_ratio",
+        "display_label": "Household Age-Dependency Ratio",
+        "importance_mean": 0.0032842571707512925,
+        "importance_std": 0.0010601514877189044,
+        "importance_min": 0.0011986505838877948,
+        "importance_max": 0.004769840917970503
+      },
+      {
+        "feature": "province_territory",
+        "display_label": "Province / Federal Territory",
+        "importance_mean": 0.0019507664215853483,
+        "importance_std": 0.0006890076580461455,
+        "importance_min": 0.0010613710420693812,
+        "importance_max": 0.003153200658991273
+      },
+      {
+        "feature": "household_size",
+        "display_label": "Household Size (All Ages)",
+        "importance_mean": 0.0015320733743062198,
+        "importance_std": 0.0010270443295644848,
+        "importance_min": -0.00017048575452072168,
+        "importance_max": 0.0030692549602943098
+      },
+      {
+        "feature": "relationship_to_head",
+        "display_label": "Relationship to Household Head",
+        "importance_mean": 0.0012707367321419306,
+        "importance_std": 0.0010843725255728419,
+        "importance_min": -0.000290525942821529,
+        "importance_max": 0.0033936305075618067
+      },
+      {
+        "feature": "regional_urban_share",
+        "display_label": "Census 2023 Regional Urban Share",
+        "importance_mean": 0.0008282919069283912,
+        "importance_std": 0.0004163527385425009,
+        "importance_min": 0.00029428935931463673,
+        "importance_max": 0.0013414556381949883
+      },
+      {
+        "feature": "regional_avg_household_size",
+        "display_label": "Census 2023 Regional Avg. Household Size",
+        "importance_mean": 0.0006614352383823241,
+        "importance_std": 0.00035092121972614193,
+        "importance_min": 0.00017458573488471352,
+        "importance_max": 0.0011284949678426193
+      },
+      {
+        "feature": "can_write",
+        "display_label": "Literacy: Can Write",
+        "importance_mean": 0.00025305625841578474,
+        "importance_std": 0.000363764706198005,
+        "importance_min": -0.0005388306269727972,
+        "importance_max": 0.0008206168869834274
+      }
+    ]
+  },
+  "diagnostic_plots": {
+    "pr_roc_plot": "reports\\figures\\09_test_pr_and_roc_curves.png",
+    "confusion_calibration_plot": "reports\\figures\\10_test_confusion_and_calibration.png",
+    "subgroup_plot": "reports\\figures\\11_test_subgroup_f1_ap.png"
+  },
+  "freeze_manifest_verified": "91a4b588ec793b86154a3abf11ba48d49b7fd706743618aa639970ca010e344d"
+}

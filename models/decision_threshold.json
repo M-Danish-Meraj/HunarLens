@@ -1,0 +1,101 @@
+{
+  "selected_model_key": "gradient_boosting",
+  "selected_model_display_name": "Gradient Boosting",
+  "decision_threshold": 0.37,
+  "default_threshold": 0.5,
+  "selection_metric": "f1_pos",
+  "selection_split": "validation_15pct",
+  "validation_metrics_at_selected_threshold": {
+    "threshold": 0.37,
+    "n_samples": 3811,
+    "positive_support": 1648,
+    "prevalence": 0.432432,
+    "f1_pos": 0.635835,
+    "precision_pos": 0.529009,
+    "recall_pos": 0.796723,
+    "average_precision": 0.634688,
+    "ap_lift_over_prevalence": 1.4677,
+    "roc_auc": 0.696636,
+    "brier_score": 0.217386,
+    "confusion_matrix": {
+      "labels": [
+        "Employed (0)",
+        "Unemployed (1)"
+      ],
+      "counts": [
+        [
+          994,
+          1169
+        ],
+        [
+          335,
+          1313
+        ]
+      ],
+      "tn": 994,
+      "fp": 1169,
+      "fn": 335,
+      "tp": 1313,
+      "row_normalized": [
+        [
+          0.4595,
+          0.5405
+        ],
+        [
+          0.2033,
+          0.7967
+        ]
+      ]
+    }
+  },
+  "validation_metrics_at_default_05_threshold": {
+    "threshold": 0.5,
+    "n_samples": 3811,
+    "positive_support": 1648,
+    "prevalence": 0.432432,
+    "f1_pos": 0.549466,
+    "precision_pos": 0.636073,
+    "recall_pos": 0.483617,
+    "average_precision": 0.634688,
+    "ap_lift_over_prevalence": 1.4677,
+    "roc_auc": 0.696636,
+    "brier_score": 0.217386,
+    "confusion_matrix": {
+      "labels": [
+        "Employed (0)",
+        "Unemployed (1)"
+      ],
+      "counts": [
+        [
+          1707,
+          456
+        ],
+        [
+          851,
+          797
+        ]
+      ],
+      "tn": 1707,
+      "fp": 456,
+      "fn": 851,
+      "tp": 797,
+      "row_normalized": [
+        [
+          0.7892,
+          0.2108
+        ],
+        [
+          0.5164,
+          0.4836
+        ]
+      ]
+    }
+  },
+  "all_models_thresholds": {
+    "dummy_prior": 0.5,
+    "dummy_all_positive": 0.5,
+    "logistic_regression": 0.34,
+    "random_forest": 0.37,
+    "gradient_boosting": 0.37
+  }
+}

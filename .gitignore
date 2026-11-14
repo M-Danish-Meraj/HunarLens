@@ -38,8 +38,9 @@ data/splits/*.csv
 data/splits/*.parquet
 !data/splits/.gitkeep
 
-# Private individual-level test predictions
+# Private individual-level test predictions & intermediate search binaries
 reports/metrics/private_*
+models/candidates/
 
 # OS / Editor files
 .DS_Store

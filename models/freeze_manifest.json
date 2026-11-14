@@ -1,0 +1,28 @@
+{
+  "status": "FROZEN_BEFORE_TEST_EVALUATION",
+  "winner_model_key": "gradient_boosting",
+  "winner_threshold": 0.37,
+  "final_pipeline_sha256": "91a4b588ec793b86154a3abf11ba48d49b7fd706743618aa639970ca010e344d",
+  "candidate_model_sha256": {
+    "dummy_prior": "90f6cd7d37bb42a0cd8e1f726845ba87763446a7fcc4b1ad5df3913d8189f83c",
+    "dummy_all_positive": "fb16dab0c8030e07494cb4e1c930baf30ef01afd83178ede50880b3c54cca845",
+    "logistic_regression": "9f1c5cefd9cd52f37445108284951484f694f971fd05cbbc24dd10f442a140d6",
+    "random_forest": "f0ba219b70f2903b2355a35d7d29286a4059442f808134679981818147797a63",
+    "gradient_boosting": "91a4b588ec793b86154a3abf11ba48d49b7fd706743618aa639970ca010e344d"
+  },
+  "split_files_sha256": {
+    "train_parquet": "70f737f3c6b0a8e785c65ca109307b331572af37a6330237addd1be8f827ddfb",
+    "val_parquet": "c8b630aa4a6b171cd8fd3bd3fe7f8fcc4be923eae3636622caa4b6c17084a591",
+    "test_parquet": "5f62aa8777ab0f80a771817b29c110ff542f2c5fc293b092d686f2e328971b3c"
+  },
+  "feature_count": 15,
+  "seeds": {
+    "test_split": 42,
+    "val_split": 43,
+    "cv_folds": 44,
+    "model_training": 42,
+    "permutation_importance": 45,
+    "bootstrap_ci": 46
+  },
+  "git_commit": "2a63fe0d55d329ca74cc41e66f85dda10379ff75"
+}

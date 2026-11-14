@@ -1,0 +1,117 @@
+{
+  "approved_15_features": [
+    "age",
+    "household_size",
+    "household_dependency_ratio",
+    "regional_pop_density_log1p",
+    "regional_urban_share",
+    "regional_avg_household_size",
+    "sex",
+    "marital_status",
+    "relationship_to_head",
+    "can_read",
+    "can_write",
+    "highest_education",
+    "current_enrolment",
+    "province_territory",
+    "locality"
+  ],
+  "numeric_features": [
+    "age",
+    "household_size",
+    "household_dependency_ratio",
+    "regional_pop_density_log1p",
+    "regional_urban_share",
+    "regional_avg_household_size"
+  ],
+  "categorical_features": [
+    "sex",
+    "marital_status",
+    "relationship_to_head",
+    "can_read",
+    "can_write",
+    "highest_education",
+    "current_enrolment",
+    "province_territory",
+    "locality"
+  ],
+  "target_column": "is_unemployed",
+  "class_mapping": {
+    "0": "Employed",
+    "1": "Unemployed"
+  },
+  "positive_class": 1,
+  "allowed_categories": {
+    "sex": [
+      "Male",
+      "Female"
+    ],
+    "marital_status": [
+      "Never Married",
+      "Currently Married",
+      "Widowed/Divorced"
+    ],
+    "relationship_to_head": [
+      "Head",
+      "Spouse",
+      "Son/Daughter",
+      "Other Relative",
+      "Non-Relative"
+    ],
+    "can_read": [
+      "Yes",
+      "No",
+      "Unknown"
+    ],
+    "can_write": [
+      "Yes",
+      "No",
+      "Unknown"
+    ],
+    "highest_education": [
+      "No Formal Education",
+      "Primary",
+      "Middle",
+      "Matric",
+      "Intermediate",
+      "Degree & Postgraduate"
+    ],
+    "current_enrolment": [
+      "Not Enrolled",
+      "Currently Enrolled"
+    ],
+    "province_territory": [
+      "Khyber Pakhtunkhwa",
+      "Punjab",
+      "Sindh",
+      "Balochistan",
+      "Islamabad"
+    ],
+    "locality": [
+      "Rural",
+      "Urban"
+    ]
+  },
+  "numeric_bounds": {
+    "age": {
+      "min": 15,
+      "max": 24
+    },
+    "household_size": {
+      "min": 1,
+      "max": 50
+    },
+    "household_dependency_ratio": {
+      "min": 0.0,
+      "max": 20.0
+    },
+    "dependents_count": {
+      "min": 0,
+      "max": 30
+    },
+    "working_age_count": {
+      "min": 1,
+      "max": 20
+    }
+  }
+}

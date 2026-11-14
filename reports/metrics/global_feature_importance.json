@@ -1,0 +1,127 @@
+{
+  "method": "validation_permutation_importance",
+  "scoring": "average_precision",
+  "figure_path": "reports\\figures\\08_global_permutation_importance.png",
+  "features": [
+    {
+      "feature": "highest_education",
+      "display_label": "Highest Formal Education",
+      "importance_mean": 0.06258432001522582,
+      "importance_std": 0.008122557416205262,
+      "importance_min": 0.051581295979971076,
+      "importance_max": 0.07646082185675551
+    },
+    {
+      "feature": "sex",
+      "display_label": "Sex / Gender",
+      "importance_mean": 0.03622081644833634,
+      "importance_std": 0.005561214604735381,
+      "importance_min": 0.026127233751199186,
+      "importance_max": 0.04533482688752588
+    },
+    {
+      "feature": "locality",
+      "display_label": "Urban / Rural Locality",
+      "importance_mean": 0.031403001637227757,
+      "importance_std": 0.00372251464481731,
+      "importance_min": 0.026346329411853664,
+      "importance_max": 0.03568534480967245
+    },
+    {
+      "feature": "current_enrolment",
+      "display_label": "Current Educational Enrolment",
+      "importance_mean": 0.020758498783645007,
+      "importance_std": 0.0037594776583584526,
+      "importance_min": 0.013669617228812103,
+      "importance_max": 0.025829257011323548
+    },
+    {
+      "feature": "regional_pop_density_log1p",
+      "display_label": "Census 2023 Regional Pop. Density (log1p)",
+      "importance_mean": 0.016384115329395467,
+      "importance_std": 0.0026179518360276745,
+      "importance_min": 0.012499921907209832,
+      "importance_max": 0.02131518696151835
+    },
+    {
+      "feature": "marital_status",
+      "display_label": "Marital Status",
+      "importance_mean": 0.00997283965066692,
+      "importance_std": 0.003118819805787238,
+      "importance_min": 0.005481446096000431,
+      "importance_max": 0.01635672220541584
+    },
+    {
+      "feature": "age",
+      "display_label": "Age (Completed Years, 15\u201324)",
+      "importance_mean": 0.006933904980989947,
+      "importance_std": 0.0017365884147812725,
+      "importance_min": 0.003796022032642732,
+      "importance_max": 0.008940618933208744
+    },
+    {
+      "feature": "can_read",
+      "display_label": "Literacy: Can Read",
+      "importance_mean": 0.005702309802840755,
+      "importance_std": 0.003115247837794403,
+      "importance_min": 0.0018184625029357138,
+      "importance_max": 0.01284193429273539
+    },
+    {
+      "feature": "household_dependency_ratio",
+      "display_label": "Household Age-Dependency Ratio",
+      "importance_mean": 0.0032842571707512925,
+      "importance_std": 0.0010601514877189044,
+      "importance_min": 0.0011986505838877948,
+      "importance_max": 0.004769840917970503
+    },
+    {
+      "feature": "province_territory",
+      "display_label": "Province / Federal Territory",
+      "importance_mean": 0.0019507664215853483,
+      "importance_std": 0.0006890076580461455,
+      "importance_min": 0.0010613710420693812,
+      "importance_max": 0.003153200658991273
+    },
+    {
+      "feature": "household_size",
+      "display_label": "Household Size (All Ages)",
+      "importance_mean": 0.0015320733743062198,
+      "importance_std": 0.0010270443295644848,
+      "importance_min": -0.00017048575452072168,
+      "importance_max": 0.0030692549602943098
+    },
+    {
+      "feature": "relationship_to_head",
+      "display_label": "Relationship to Household Head",
+      "importance_mean": 0.0012707367321419306,
+      "importance_std": 0.0010843725255728419,
+      "importance_min": -0.000290525942821529,
+      "importance_max": 0.0033936305075618067
+    },
+    {
+      "feature": "regional_urban_share",
+      "display_label": "Census 2023 Regional Urban Share",
+      "importance_mean": 0.0008282919069283912,
+      "importance_std": 0.0004163527385425009,
+      "importance_min": 0.00029428935931463673,
+      "importance_max": 0.0013414556381949883
+    },
+    {
+      "feature": "regional_avg_household_size",
+      "display_label": "Census 2023 Regional Avg. Household Size",
+      "importance_mean": 0.0006614352383823241,
+      "importance_std": 0.00035092121972614193,
+      "importance_min": 0.00017458573488471352,
+      "importance_max": 0.0011284949678426193
+    },
+    {
+      "feature": "can_write",
+      "display_label": "Literacy: Can Write",
+      "importance_mean": 0.00025305625841578474,
+      "importance_std": 0.000363764706198005,
+      "importance_min": -0.0005388306269727972,
+      "importance_max": 0.0008206168869834274
+    }
+  ]
+}

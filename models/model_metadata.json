@@ -1,0 +1,123 @@
+{
+  "project": "HunarLens \u2014 Youth Unemployment Vulnerability & Skills Gap Analysis in Pakistan",
+  "survey_coverage": "PBS Labour Force Survey 2024-25 + Pakistan Census 2023 Regional Context",
+  "intended_use": "Educational and exploratory analysis of survey-defined unemployment associations among eligible Pakistani youth aged 15-24 in the labour force. Not for automated hiring, benefit eligibility, or causal policy claims.",
+  "selected_model_key": "gradient_boosting",
+  "selected_model_display_name": "Gradient Boosting",
+  "selected_hyperparameters": {
+    "classifier__subsample": 1.0,
+    "classifier__n_estimators": 300,
+    "classifier__min_samples_leaf": 10,
+    "classifier__max_depth": 2,
+    "classifier__learning_rate": 0.03
+  },
+  "calibrated": false,
+  "decision_threshold": 0.37,
+  "training_row_count": 17913,
+  "training_psu_count": 1260,
+  "training_prevalence": 0.432423,
+  "validation_row_count": 3811,
+  "validation_psu_count": 270,
+  "validation_prevalence": 0.432432,
+  "cv_summary": {
+    "best_index": 5,
+    "best_params": {
+      "classifier__subsample": 1.0,
+      "classifier__n_estimators": 300,
+      "classifier__min_samples_leaf": 10,
+      "classifier__max_depth": 2,
+      "classifier__learning_rate": 0.03
+    },
+    "n_candidates_evaluated": 20,
+    "search_runtime_seconds": 319.106,
+    "cv_metrics": {
+      "average_precision": {
+        "cv_mean": 0.633836,
+        "cv_std": 0.012822,
+        "train_mean": 0.644887,
+        "train_std": 0.003505,
+        "train_minus_cv_gap": 0.011051
+      },
+      "f1_pos": {
+        "cv_mean": 0.536214,
+        "cv_std": 0.019309,
+        "train_mean": 0.543255,
+        "train_std": 0.004427,
+        "train_minus_cv_gap": 0.007041
+      },
+      "precision_pos": {
+        "cv_mean": 0.631779,
+        "cv_std": 0.011195,
+        "train_mean": 0.638821,
+        "train_std": 0.004169,
+        "train_minus_cv_gap": 0.007042
+      },
+      "recall_pos": {
+        "cv_mean": 0.466158,
+        "cv_std": 0.024975,
+        "train_mean": 0.472566,
+        "train_std": 0.004563,
+        "train_minus_cv_gap": 0.006408
+      },
+      "roc_auc": {
+        "cv_mean": 0.698474,
+        "cv_std": 0.005352,
+        "train_mean": 0.707144,
+        "train_std": 0.001965,
+        "train_minus_cv_gap": 0.00867
+      }
+    }
+  },
+  "validation_metrics_at_threshold": {
+    "threshold": 0.37,
+    "n_samples": 3811,
+    "positive_support": 1648,
+    "prevalence": 0.432432,
+    "f1_pos": 0.635835,
+    "precision_pos": 0.529009,
+    "recall_pos": 0.796723,
+    "average_precision": 0.634688,
+    "ap_lift_over_prevalence": 1.4677,
+    "roc_auc": 0.696636,
+    "brier_score": 0.217386,
+    "confusion_matrix": {
+      "labels": [
+        "Employed (0)",
+        "Unemployed (1)"
+      ],
+      "counts": [
+        [
+          994,
+          1169
+        ],
+        [
+          335,
+          1313
+        ]
+      ],
+      "tn": 994,
+      "fp": 1169,
+      "fn": 335,
+      "tp": 1313,
+      "row_normalized": [
+        [
+          0.4595,
+          0.5405
+        ],
+        [
+          0.2033,
+          0.7967
+        ]
+      ]
+    }
+  },
+  "artifact_sha256": "91a4b588ec793b86154a3abf11ba48d49b7fd706743618aa639970ca010e344d",
+  "git_commit": "2a63fe0d55d329ca74cc41e66f85dda10379ff75",
+  "software_versions": {
+    "python": "3.14.7",
+    "scikit_learn": "1.9.1",
+    "pandas": "3.0.6",
+    "numpy": "2.4.6",
+    "joblib": "1.6.0"
+  }
+}

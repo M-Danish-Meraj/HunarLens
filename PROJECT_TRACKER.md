@@ -71,13 +71,13 @@
 ## Phase 5: Model Training, 5-Fold Search, Threshold Selection & One-Time Test Evaluation
 *Objective: Train baselines and 3 algorithms with grouped CV, select optimal decision thresholds on validation, freeze artifacts, and run single-batch test evaluation (§9, §10, §11).*
 
-- [ ] **Step 5.1 — Model Training, Grouped CV & Ablation Module (`src/hunarlens/train.py`, `scripts/train_models.py`)**
+- [x] **Step 5.1 — Model Training, Grouped CV & Ablation Module (`src/hunarlens/train.py`, `scripts/train_models.py`)** *(Completed: Executed 5-fold StratifiedGroupKFold search across 17,913 training rows [1,260 PSUs] for Dummy Prior, Dummy All-Positive, Logistic Regression [CV AP=0.6332], Random Forest [CV AP=0.6275], and Gradient Boosting [CV AP=0.6338], plus 2 preplanned ablations; selected and froze Gradient Boosting at validation threshold 0.37 [Val F1=0.6358, Val AP=0.6347] into `models/final_pipeline.joblib`.)*
   - Implement training and hyperparameter search for `DummyClassifier` (`prior` and `constant=1`), `LogisticRegression` (GridSearchCV), `RandomForestClassifier` (RandomizedSearchCV), and `GradientBoostingClassifier` (RandomizedSearchCV, `n_iter_no_change=None`).
   - Run preplanned training-CV ablations (demographics-only vs. +Census; with vs. without sex/gender) and validation threshold selection (grid 0.01–0.99 maximizing class-1 F1).
   - Serialize frozen winner and metadata to `models/` (`final_pipeline.joblib`, `model_metadata.json`, `decision_threshold.json`, `feature_schema.json`).
-- [ ] **Step 5.2 — Explainability & Inference Wrapper (`src/hunarlens/explain.py`, `src/hunarlens/inference.py`)**
+- [x] **Step 5.2 — Explainability & Inference Wrapper (`src/hunarlens/explain.py`, `src/hunarlens/inference.py`)** *(Completed: Implemented validation permutation importance over the 15 conceptual predictors [`08_global_permutation_importance.png`], counterfactual local profile contribution decomposition, and `HunarLensPredictor` validated inference API.)*
   - Implement grouped validation permutation importance (on raw conceptual features), local feature contribution breakdown, and validated single-profile inference API.
-- [ ] **Step 5.3 — Frozen Single-Batch Test Evaluation (`src/hunarlens/evaluate.py`, `scripts/evaluate_once.py`, `notebooks/03_model_comparison.ipynb`, `notebooks/04_explanations.ipynb`)**
+- [x] **Step 5.3 — Frozen Single-Batch Test Evaluation (`src/hunarlens/evaluate.py`, `scripts/evaluate_once.py`, `notebooks/03_model_comparison.ipynb`, `notebooks/04_explanations.ipynb`)** *(Completed: Verified freeze manifest hashes and evaluated all 5 frozen models once on the 3,860-row sealed test set [270 PSUs]; Gradient Boosting achieved Test F1=0.6495 [95% CI: 0.6307, 0.6701], Test AP=0.6511 [95% CI: 0.6267, 0.6782], ROC-AUC=0.7065, Brier=0.2165, significantly beating both Dummy baselines; exported PR/ROC, confusion/calibration, and subgroup figures plus `docs/final_evaluation_report.md`.)*
   - Verify freeze manifest, evaluate all frozen models once on the 15% test split, compute 1,000-resample PSU-clustered bootstrap 95% CIs for class-1 F1 and AP, subgroup metrics with `<30` suppression, reliability/PR/confusion plots, and export `reports/metrics/`.
 
 ---

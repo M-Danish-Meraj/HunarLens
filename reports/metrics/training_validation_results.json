@@ -1,0 +1,768 @@
+{
+  "winner_model_key": "gradient_boosting",
+  "winner_display_name": "Gradient Boosting",
+  "winner_threshold": 0.37,
+  "models": {
+    "dummy_prior": {
+      "display_name": "Dummy Baseline (Prior / Majority)",
+      "is_baseline": true,
+      "cv_summary": {
+        "best_index": 0,
+        "best_params": {},
+        "n_candidates_evaluated": 1,
+        "search_runtime_seconds": 2.931,
+        "cv_metrics": {
+          "average_precision": {
+            "cv_mean": 0.432424,
+            "cv_std": 0.000483,
+            "train_mean": 0.432423,
+            "train_std": 0.000121,
+            "train_minus_cv_gap": -0.0
+          },
+          "f1_pos": {
+            "cv_mean": 0.0,
+            "cv_std": 0.0,
+            "train_mean": 0.0,
+            "train_std": 0.0,
+            "train_minus_cv_gap": 0.0
+          },
+          "precision_pos": {
+            "cv_mean": 0.0,
+            "cv_std": 0.0,
+            "train_mean": 0.0,
+            "train_std": 0.0,
+            "train_minus_cv_gap": 0.0
+          },
+          "recall_pos": {
+            "cv_mean": 0.0,
+            "cv_std": 0.0,
+            "train_mean": 0.0,
+            "train_std": 0.0,
+            "train_minus_cv_gap": 0.0
+          },
+          "roc_auc": {
+            "cv_mean": 0.5,
+            "cv_std": 0.0,
+            "train_mean": 0.5,
+            "train_std": 0.0,
+            "train_minus_cv_gap": 0.0
+          }
+        }
+      },
+      "validation_threshold_selection": {
+        "selected_threshold": 0.5,
+        "metrics_at_selected_threshold": {
+          "threshold": 0.5,
+          "n_samples": 3811,
+          "positive_support": 1648,
+          "prevalence": 0.432432,
+          "f1_pos": 0.0,
+          "precision_pos": 0.0,
+          "recall_pos": 0.0,
+          "average_precision": 0.432432,
+          "ap_lift_over_prevalence": 1.0,
+          "roc_auc": 0.5,
+          "brier_score": 0.245435,
+          "confusion_matrix": {
+            "labels": [
+              "Employed (0)",
+              "Unemployed (1)"
+            ],
+            "counts": [
+              [
+                2163,
+                0
+              ],
+              [
+                1648,
+                0
+              ]
+            ],
+            "tn": 2163,
+            "fp": 0,
+            "fn": 1648,
+            "tp": 0,
+            "row_normalized": [
+              [
+                1.0,
+                0.0
+              ],
+              [
+                1.0,
+                0.0
+              ]
+            ]
+          }
+        },
+        "metrics_at_default_05_threshold": {
+          "threshold": 0.5,
+          "n_samples": 3811,
+          "positive_support": 1648,
+          "prevalence": 0.432432,
+          "f1_pos": 0.0,
+          "precision_pos": 0.0,
+          "recall_pos": 0.0,
+          "average_precision": 0.432432,
+          "ap_lift_over_prevalence": 1.0,
+          "roc_auc": 0.5,
+          "brier_score": 0.245435,
+          "confusion_matrix": {
+            "labels": [
+              "Employed (0)",
+              "Unemployed (1)"
+            ],
+            "counts": [
+              [
+                2163,
+                0
+              ],
+              [
+                1648,
+                0
+              ]
+            ],
+            "tn": 2163,
+            "fp": 0,
+            "fn": 1648,
+            "tp": 0,
+            "row_normalized": [
+              [
+                1.0,
+                0.0
+              ],
+              [
+                1.0,
+                0.0
+              ]
+            ]
+          }
+        }
+      }
+    },
+    "dummy_all_positive": {
+      "display_name": "Dummy Baseline (All-Positive / Unemployed)",
+      "is_baseline": true,
+      "cv_summary": {
+        "best_index": 0,
+        "best_params": {},
+        "n_candidates_evaluated": 1,
+        "search_runtime_seconds": 2.775,
+        "cv_metrics": {
+          "average_precision": {
+            "cv_mean": 0.432424,
+            "cv_std": 0.000483,
+            "train_mean": 0.432423,
+            "train_std": 0.000121,
+            "train_minus_cv_gap": -0.0
+          },
+          "f1_pos": {
+            "cv_mean": 0.603765,
+            "cv_std": 0.000471,
+            "train_mean": 0.603765,
+            "train_std": 0.000118,
+            "train_minus_cv_gap": 0.0
+          },
+          "precision_pos": {
+            "cv_mean": 0.432424,
+            "cv_std": 0.000483,
+            "train_mean": 0.432423,
+            "train_std": 0.000121,
+            "train_minus_cv_gap": -0.0
+          },
+          "recall_pos": {
+            "cv_mean": 1.0,
+            "cv_std": 0.0,
+            "train_mean": 1.0,
+            "train_std": 0.0,
+            "train_minus_cv_gap": 0.0
+          },
+          "roc_auc": {
+            "cv_mean": 0.5,
+            "cv_std": 0.0,
+            "train_mean": 0.5,
+            "train_std": 0.0,
+            "train_minus_cv_gap": 0.0
+          }
+        }
+      },
+      "validation_threshold_selection": {
+        "selected_threshold": 0.5,
+        "metrics_at_selected_threshold": {
+          "threshold": 0.5,
+          "n_samples": 3811,
+          "positive_support": 1648,
+          "prevalence": 0.432432,
+          "f1_pos": 0.603774,
+          "precision_pos": 0.432432,
+          "recall_pos": 1.0,
+          "average_precision": 0.432432,
+          "ap_lift_over_prevalence": 1.0,
+          "roc_auc": 0.5,
+          "brier_score": 0.567568,
+          "confusion_matrix": {
+            "labels": [
+              "Employed (0)",
+              "Unemployed (1)"
+            ],
+            "counts": [
+              [
+                0,
+                2163
+              ],
+              [
+                0,
+                1648
+              ]
+            ],
+            "tn": 0,
+            "fp": 2163,
+            "fn": 0,
+            "tp": 1648,
+            "row_normalized": [
+              [
+                0.0,
+                1.0
+              ],
+              [
+                0.0,
+                1.0
+              ]
+            ]
+          }
+        },
+        "metrics_at_default_05_threshold": {
+          "threshold": 0.5,
+          "n_samples": 3811,
+          "positive_support": 1648,
+          "prevalence": 0.432432,
+          "f1_pos": 0.603774,
+          "precision_pos": 0.432432,
+          "recall_pos": 1.0,
+          "average_precision": 0.432432,
+          "ap_lift_over_prevalence": 1.0,
+          "roc_auc": 0.5,
+          "brier_score": 0.567568,
+          "confusion_matrix": {
+            "labels": [
+              "Employed (0)",
+              "Unemployed (1)"
+            ],
+            "counts": [
+              [
+                0,
+                2163
+              ],
+              [
+                0,
+                1648
+              ]
+            ],
+            "tn": 0,
+            "fp": 2163,
+            "fn": 0,
+            "tp": 1648,
+            "row_normalized": [
+              [
+                0.0,
+                1.0
+              ],
+              [
+                0.0,
+                1.0
+              ]
+            ]
+          }
+        }
+      }
+    },
+    "logistic_regression": {
+      "display_name": "Logistic Regression",
+      "is_baseline": false,
+      "cv_summary": {
+        "best_index": 6,
+        "best_params": {
+          "classifier__C": 10.0,
+          "classifier__class_weight": null
+        },
+        "n_candidates_evaluated": 8,
+        "search_runtime_seconds": 26.306,
+        "cv_metrics": {
+          "average_precision": {
+            "cv_mean": 0.633185,
+            "cv_std": 0.010671,
+            "train_mean": 0.635084,
+            "train_std": 0.002721,
+            "train_minus_cv_gap": 0.001899
+          },
+          "f1_pos": {
+            "cv_mean": 0.552679,
+            "cv_std": 0.015639,
+            "train_mean": 0.553976,
+            "train_std": 0.004285,
+            "train_minus_cv_gap": 0.001297
+          },
+          "precision_pos": {
+            "cv_mean": 0.622441,
+            "cv_std": 0.010625,
+            "train_mean": 0.623279,
+            "train_std": 0.003563,
+            "train_minus_cv_gap": 0.000838
+          },
+          "recall_pos": {
+            "cv_mean": 0.497273,
+            "cv_std": 0.021133,
+            "train_mean": 0.498548,
+            "train_std": 0.004758,
+            "train_minus_cv_gap": 0.001275
+          },
+          "roc_auc": {
+            "cv_mean": 0.697945,
+            "cv_std": 0.006172,
+            "train_mean": 0.699753,
+            "train_std": 0.001577,
+            "train_minus_cv_gap": 0.001808
+          }
+        }
+      },
+      "validation_threshold_selection": {
+        "selected_threshold": 0.34,
+        "metrics_at_selected_threshold": {
+          "threshold": 0.34,
+          "n_samples": 3811,
+          "positive_support": 1648,
+          "prevalence": 0.432432,
+          "f1_pos": 0.637139,
+          "precision_pos": 0.522533,
+          "recall_pos": 0.816141,
+          "average_precision": 0.632714,
+          "ap_lift_over_prevalence": 1.4632,
+          "roc_auc": 0.699451,
+          "brier_score": 0.216123,
+          "confusion_matrix": {
+            "labels": [
+              "Employed (0)",
+              "Unemployed (1)"
+            ],
+            "counts": [
+              [
+                934,
+                1229
+              ],
+              [
+                303,
+                1345
+              ]
+            ],
+            "tn": 934,
+            "fp": 1229,
+            "fn": 303,
+            "tp": 1345,
+            "row_normalized": [
+              [
+                0.4318,
+                0.5682
+              ],
+              [
+                0.1839,
+                0.8161
+              ]
+            ]
+          }
+        },
+        "metrics_at_default_05_threshold": {
+          "threshold": 0.5,
+          "n_samples": 3811,
+          "positive_support": 1648,
+          "prevalence": 0.432432,
+          "f1_pos": 0.565522,
+          "precision_pos": 0.627683,
+          "recall_pos": 0.514563,
+          "average_precision": 0.632714,
+          "ap_lift_over_prevalence": 1.4632,
+          "roc_auc": 0.699451,
+          "brier_score": 0.216123,
+          "confusion_matrix": {
+            "labels": [
+              "Employed (0)",
+              "Unemployed (1)"
+            ],
+            "counts": [
+              [
+                1660,
+                503
+              ],
+              [
+                800,
+                848
+              ]
+            ],
+            "tn": 1660,
+            "fp": 503,
+            "fn": 800,
+            "tp": 848,
+            "row_normalized": [
+              [
+                0.7675,
+                0.2325
+              ],
+              [
+                0.4854,
+                0.5146
+              ]
+            ]
+          }
+        },
+        "threshold_grid_evaluated_count": 101
+      }
+    },
+    "random_forest": {
+      "display_name": "Random Forest",
+      "is_baseline": false,
+      "cv_summary": {
+        "best_index": 19,
+        "best_params": {
+          "classifier__n_estimators": 200,
+          "classifier__min_samples_leaf": 10,
+          "classifier__max_features": "sqrt",
+          "classifier__max_depth": 10,
+          "classifier__class_weight": "balanced_subsample"
+        },
+        "n_candidates_evaluated": 20,
+        "search_runtime_seconds": 568.56,
+        "cv_metrics": {
+          "average_precision": {
+            "cv_mean": 0.627533,
+            "cv_std": 0.013306,
+            "train_mean": 0.687923,
+            "train_std": 0.002545,
+            "train_minus_cv_gap": 0.06039
+          },
+          "f1_pos": {
+            "cv_mean": 0.605591,
+            "cv_std": 0.011382,
+            "train_mean": 0.641371,
+            "train_std": 0.002418,
+            "train_minus_cv_gap": 0.03578
+          },
+          "precision_pos": {
+            "cv_mean": 0.574313,
+            "cv_std": 0.004739,
+            "train_mean": 0.608093,
+            "train_std": 0.003931,
+            "train_minus_cv_gap": 0.03378
+          },
+          "recall_pos": {
+            "cv_mean": 0.641088,
+            "cv_std": 0.025748,
+            "train_mean": 0.678577,
+            "train_std": 0.006634,
+            "train_minus_cv_gap": 0.037489
+          },
+          "roc_auc": {
+            "cv_mean": 0.692741,
+            "cv_std": 0.007093,
+            "train_mean": 0.741275,
+            "train_std": 0.001693,
+            "train_minus_cv_gap": 0.048534
+          }
+        }
+      },
+      "validation_threshold_selection": {
+        "selected_threshold": 0.37,
+        "metrics_at_selected_threshold": {
+          "threshold": 0.37,
+          "n_samples": 3811,
+          "positive_support": 1648,
+          "prevalence": 0.432432,
+          "f1_pos": 0.632356,
+          "precision_pos": 0.492391,
+          "recall_pos": 0.883495,
+          "average_precision": 0.63393,
+          "ap_lift_over_prevalence": 1.466,
+          "roc_auc": 0.69112,
+          "brier_score": 0.222198,
+          "confusion_matrix": {
+            "labels": [
+              "Employed (0)",
+              "Unemployed (1)"
+            ],
+            "counts": [
+              [
+                662,
+                1501
+              ],
+              [
+                192,
+                1456
+              ]
+            ],
+            "tn": 662,
+            "fp": 1501,
+            "fn": 192,
+            "tp": 1456,
+            "row_normalized": [
+              [
+                0.3061,
+                0.6939
+              ],
+              [
+                0.1165,
+                0.8835
+              ]
+            ]
+          }
+        },
+        "metrics_at_default_05_threshold": {
+          "threshold": 0.5,
+          "n_samples": 3811,
+          "positive_support": 1648,
+          "prevalence": 0.432432,
+          "f1_pos": 0.601255,
+          "precision_pos": 0.567277,
+          "recall_pos": 0.639563,
+          "average_precision": 0.63393,
+          "ap_lift_over_prevalence": 1.466,
+          "roc_auc": 0.69112,
+          "brier_score": 0.222198,
+          "confusion_matrix": {
+            "labels": [
+              "Employed (0)",
+              "Unemployed (1)"
+            ],
+            "counts": [
+              [
+                1359,
+                804
+              ],
+              [
+                594,
+                1054
+              ]
+            ],
+            "tn": 1359,
+            "fp": 804,
+            "fn": 594,
+            "tp": 1054,
+            "row_normalized": [
+              [
+                0.6283,
+                0.3717
+              ],
+              [
+                0.3604,
+                0.6396
+              ]
+            ]
+          }
+        },
+        "threshold_grid_evaluated_count": 101
+      }
+    },
+    "gradient_boosting": {
+      "display_name": "Gradient Boosting",
+      "is_baseline": false,
+      "cv_summary": {
+        "best_index": 5,
+        "best_params": {
+          "classifier__subsample": 1.0,
+          "classifier__n_estimators": 300,
+          "classifier__min_samples_leaf": 10,
+          "classifier__max_depth": 2,
+          "classifier__learning_rate": 0.03
+        },
+        "n_candidates_evaluated": 20,
+        "search_runtime_seconds": 319.106,
+        "cv_metrics": {
+          "average_precision": {
+            "cv_mean": 0.633836,
+            "cv_std": 0.012822,
+            "train_mean": 0.644887,
+            "train_std": 0.003505,
+            "train_minus_cv_gap": 0.011051
+          },
+          "f1_pos": {
+            "cv_mean": 0.536214,
+            "cv_std": 0.019309,
+            "train_mean": 0.543255,
+            "train_std": 0.004427,
+            "train_minus_cv_gap": 0.007041
+          },
+          "precision_pos": {
+            "cv_mean": 0.631779,
+            "cv_std": 0.011195,
+            "train_mean": 0.638821,
+            "train_std": 0.004169,
+            "train_minus_cv_gap": 0.007042
+          },
+          "recall_pos": {
+            "cv_mean": 0.466158,
+            "cv_std": 0.024975,
+            "train_mean": 0.472566,
+            "train_std": 0.004563,
+            "train_minus_cv_gap": 0.006408
+          },
+          "roc_auc": {
+            "cv_mean": 0.698474,
+            "cv_std": 0.005352,
+            "train_mean": 0.707144,
+            "train_std": 0.001965,
+            "train_minus_cv_gap": 0.00867
+          }
+        }
+      },
+      "validation_threshold_selection": {
+        "selected_threshold": 0.37,
+        "metrics_at_selected_threshold": {
+          "threshold": 0.37,
+          "n_samples": 3811,
+          "positive_support": 1648,
+          "prevalence": 0.432432,
+          "f1_pos": 0.635835,
+          "precision_pos": 0.529009,
+          "recall_pos": 0.796723,
+          "average_precision": 0.634688,
+          "ap_lift_over_prevalence": 1.4677,
+          "roc_auc": 0.696636,
+          "brier_score": 0.217386,
+          "confusion_matrix": {
+            "labels": [
+              "Employed (0)",
+              "Unemployed (1)"
+            ],
+            "counts": [
+              [
+                994,
+                1169
+              ],
+              [
+                335,
+                1313
+              ]
+            ],
+            "tn": 994,
+            "fp": 1169,
+            "fn": 335,
+            "tp": 1313,
+            "row_normalized": [
+              [
+                0.4595,
+                0.5405
+              ],
+              [
+                0.2033,
+                0.7967
+              ]
+            ]
+          }
+        },
+        "metrics_at_default_05_threshold": {
+          "threshold": 0.5,
+          "n_samples": 3811,
+          "positive_support": 1648,
+          "prevalence": 0.432432,
+          "f1_pos": 0.549466,
+          "precision_pos": 0.636073,
+          "recall_pos": 0.483617,
+          "average_precision": 0.634688,
+          "ap_lift_over_prevalence": 1.4677,
+          "roc_auc": 0.696636,
+          "brier_score": 0.217386,
+          "confusion_matrix": {
+            "labels": [
+              "Employed (0)",
+              "Unemployed (1)"
+            ],
+            "counts": [
+              [
+                1707,
+                456
+              ],
+              [
+                851,
+                797
+              ]
+            ],
+            "tn": 1707,
+            "fp": 456,
+            "fn": 851,
+            "tp": 797,
+            "row_normalized": [
+              [
+                0.7892,
+                0.2108
+              ],
+              [
+                0.5164,
+                0.4836
+              ]
+            ]
+          }
+        },
+        "threshold_grid_evaluated_count": 101
+      }
+    }
+  },
+  "ablations": [
+    {
+      "ablation_name": "full_15_features",
+      "feature_count": 15,
+      "dropped_features": [],
+      "cv_ap_mean": 0.633836,
+      "cv_ap_std": 0.012822,
+      "cv_f1_05_mean": 0.536214,
+      "cv_roc_auc_mean": 0.698474
+    },
+    {
+      "ablation_name": "demographics_only_no_census",
+      "feature_count": 12,
+      "dropped_features": [
+        "regional_pop_density_log1p",
+        "regional_urban_share",
+        "regional_avg_household_size"
+      ],
+      "cv_ap_mean": 0.63413,
+      "cv_ap_std": 0.012994,
+      "cv_f1_05_mean": 0.532885,
+      "cv_roc_auc_mean": 0.698203
+    },
+    {
+      "ablation_name": "demographics_plus_census_no_sex",
+      "feature_count": 14,
+      "dropped_features": [
+        "sex"
+      ],
+      "cv_ap_mean": 0.614727,
+      "cv_ap_std": 0.00856,
+      "cv_f1_05_mean": 0.531092,
+      "cv_roc_auc_mean": 0.689098
+    }
+  ],
+  "freeze_manifest": {
+    "status": "FROZEN_BEFORE_TEST_EVALUATION",
+    "winner_model_key": "gradient_boosting",
+    "winner_threshold": 0.37,
+    "final_pipeline_sha256": "91a4b588ec793b86154a3abf11ba48d49b7fd706743618aa639970ca010e344d",
+    "candidate_model_sha256": {
+      "dummy_prior": "90f6cd7d37bb42a0cd8e1f726845ba87763446a7fcc4b1ad5df3913d8189f83c",
+      "dummy_all_positive": "fb16dab0c8030e07494cb4e1c930baf30ef01afd83178ede50880b3c54cca845",
+      "logistic_regression": "9f1c5cefd9cd52f37445108284951484f694f971fd05cbbc24dd10f442a140d6",
+      "random_forest": "f0ba219b70f2903b2355a35d7d29286a4059442f808134679981818147797a63",
+      "gradient_boosting": "91a4b588ec793b86154a3abf11ba48d49b7fd706743618aa639970ca010e344d"
+    },
+    "split_files_sha256": {
+      "train_parquet": "70f737f3c6b0a8e785c65ca109307b331572af37a6330237addd1be8f827ddfb",
+      "val_parquet": "c8b630aa4a6b171cd8fd3bd3fe7f8fcc4be923eae3636622caa4b6c17084a591",
+      "test_parquet": "5f62aa8777ab0f80a771817b29c110ff542f2c5fc293b092d686f2e328971b3c"
+    },
+    "feature_count": 15,
+    "seeds": {
+      "test_split": 42,
+      "val_split": 43,
+      "cv_folds": 44,
+      "model_training": 42,
+      "permutation_importance": 45,
+      "bootstrap_ci": 46
+    },
+    "git_commit": "2a63fe0d55d329ca74cc41e66f85dda10379ff75"
+  }
+}
