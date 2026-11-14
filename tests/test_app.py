@@ -128,3 +128,4 @@ def test_dashboard_artifacts_and_figures_exist() -> None:
     ]
     for fig_name in expected_figures:
         assert (REPO_ROOT / "reports/figures" / fig_name).exists(), f"Missing figure: {fig_name}"
+

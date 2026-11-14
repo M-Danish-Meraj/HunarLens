@@ -135,7 +135,7 @@ def render_overview_view(predictor: HunarLensPredictor, artifacts: Dict[str, Any
     st.title("📊 HunarLens — Youth Unemployment Vulnerability & Skills Analysis")
     st.markdown(
         "**Course:** CT-378 Machine Learning · **Group:** AlphaDevs "
-        "(Sarim Khan `CT-24266`, Muhammad Saraib `CT-24255`, Danish Meraj `CT-24268`)  \n"
+        "(Danish Meraj `CT-24268`, Sarim Khan `CT-24266`, Muhammad Saraib `CT-24255`)  \n"
         "**Survey Coverage:** Pakistan Bureau of Statistics (PBS) **Labour Force Survey 2024–25** "
         "integrated with **7th Population & Housing Census 2023 (Table 1)** regional indicators."
     )

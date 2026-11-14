@@ -1,7 +1,7 @@
 # HunarLens — Instructor-Approved Deployment Scope Exception (`deployment_exception.md`)
 
 **Course:** CT-378 Machine Learning  
-**Group:** AlphaDevs — Sarim Khan (CT-24266), Muhammad Saraib (CT-24255), Danish Meraj (CT-24268)  
+**Group:** AlphaDevs — Danish Meraj (CT-24268), Sarim Khan (CT-24266), Muhammad Saraib (CT-24255)  
 **Reference:** [PROJECT_PLAN.md](file:///d:/Hunarlens/PROJECT_PLAN.md) §1, §2, §3, §12
 
 ---

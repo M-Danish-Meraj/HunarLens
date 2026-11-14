@@ -4,7 +4,7 @@
 
 **Course:** CT-378 Machine Learning · **Group:** AlphaDevs · **Prepared:** 13 November 2026
 
-**Team:** Sarim Khan (CT-24266), Muhammad Saraib (CT-24255), Danish Meraj (CT-24268)
+**Team:** Danish Meraj (CT-24268), Sarim Khan (CT-24266), Muhammad Saraib (CT-24255)
 
 **Planning basis:** All three pages of `AlphaDevs.pdf`, both pages of `CT-378 ML Project Guidelines (1).pdf`, and the user's confirmed instructor approval for Streamlit-only deployment.
 
@@ -454,9 +454,9 @@ These are proposed responsibilities to make the plan executable; update the fina
 
 | Member | Primary coding responsibility | Cross-review and presentation responsibility |
 | --- | --- | --- |
+| Danish Meraj, CT-24268 | System architecture, feature pipelines, model training/search, threshold optimization, explainability, inference engine, and Streamlit application/deployment. | Review inference parity; lead live demonstration; explain the full model lifecycle. |
 | Sarim Khan, CT-24266 | Source preparation, Census merge, target construction, feature dictionary and data audit. | Review deployment schema; present problem/data; explain label and leakage logic. |
-| Muhammad Saraib, CT-24255 | Pipelines, grouped splitting, training/search, threshold selection and evaluation outputs. | Review target tests; present results; explain metrics, overfitting and baseline comparisons. |
-| Danish Meraj, CT-24268 | Streamlit forms/views, explanation integration, model loading, hosting and app checks. | Review inference parity; lead live demonstration; explain the full model lifecycle. |
+| Muhammad Saraib, CT-24255 | Grouped splitting, training-only EDA, frozen test evaluation outputs and subgroup audits. | Review target tests; present results; explain metrics, overfitting and baseline comparisons. |
 | All three | Documentation, substantive code contributions, tests, peer review and reproducibility run. | Each rehearses every module, not only their assigned component. |
 
 Keep a concise weekly contribution log with commit or issue references. Every member should be able to explain why the test set stayed sealed, why target questions were excluded, how groups are formed, how F1 differs from AP, why a threshold differs from 0.5, and what the model cannot infer.

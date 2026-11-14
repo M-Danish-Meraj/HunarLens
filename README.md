@@ -1,7 +1,7 @@
 # HunarLens — An Explainable Machine Learning System for Youth Unemployment Vulnerability and Skills Gap Analysis in Pakistan
 
 **Course:** CT-378 Machine Learning · **Group:** AlphaDevs  
-**Team Members:** Sarim Khan (`CT-24266`), Muhammad Saraib (`CT-24255`), Danish Meraj (`CT-24268`)  
+**Team Members:** Danish Meraj (`CT-24268`), Sarim Khan (`CT-24266`), Muhammad Saraib (`CT-24255`)  
 **Detailed Implementation Plan:** [PROJECT_PLAN.md](file:///d:/Hunarlens/PROJECT_PLAN.md) · **Live Progress Tracker:** [PROJECT_TRACKER.md](file:///d:/Hunarlens/PROJECT_TRACKER.md)
 
 ---
@@ -12,6 +12,8 @@
 * **Primary Users:** Student researchers, youth-employment analysts, and vocational program planners exploring regional/demographic patterns and model behaviour.
 * **Methodological Guardrails (§1):** The classifier estimates a probability score associated with **current survey-defined unemployment conditional on labour-force membership (2024–25)**. It does **not** predict future job loss, determine official benefit/hiring eligibility, or establish causal effects of education or training.
 * **Deployment Scope Exception ([docs/deployment_exception.md](file:///d:/Hunarlens/docs/deployment_exception.md)):** Per confirmed instructor approval, a single multi-view **Streamlit Community Cloud** application (`app/streamlit_app.py`) replaces the three-platform deployment listing in the general course handout.
+* **GitHub Repository:** https://github.com/M-Danish-Meraj/HunarLens
+* **Streamlit Community Cloud Entrypoint:** `app/streamlit_app.py` ([Deploy / Open on Streamlit Community Cloud](https://share.streamlit.io/deploy?repository=M-Danish-Meraj/HunarLens&branch=main&mainModule=app/streamlit_app.py))
 
 ---
 
@@ -92,3 +94,4 @@ streamlit run app/streamlit_app.py
 * `models/` — Frozen inference artifact (`final_pipeline.joblib`), `decision_threshold.json`, `feature_schema.json`, `model_metadata.json`, and `freeze_manifest.json`.
 * `reports/` — 11 publication-grade PNG plots (`figures/`), JSON metrics (`metrics/`), [model_card.md](file:///d:/Hunarlens/reports/model_card.md), and [contribution_table.md](file:///d:/Hunarlens/reports/contribution_table.md).
 * `tests/` — Automated pytest suite (`test_labels.py`, `test_leakage.py`, `test_pipeline.py`, `test_app.py`).
+

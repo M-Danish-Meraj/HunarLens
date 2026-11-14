@@ -1,7 +1,7 @@
 """HunarLens — Explainable ML System for Youth Unemployment Vulnerability & Skills Gap Analysis in Pakistan.
 
 Course: CT-378 Machine Learning
-Group: AlphaDevs (Sarim Khan CT-24266, Muhammad Saraib CT-24255, Danish Meraj CT-24268)
+Group: AlphaDevs (Danish Meraj CT-24268, Sarim Khan CT-24266, Muhammad Saraib CT-24255)
 """
 
 from __future__ import annotations
