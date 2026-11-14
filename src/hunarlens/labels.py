@@ -247,3 +247,4 @@ def assert_readiness_gate(
     unique_targets = set(df["is_unemployed"].unique().tolist())
     if unique_targets != {0, 1}:
         raise ValueError(f"Target column 'is_unemployed' must contain both classes {{0, 1}}, got {unique_targets}.")
+
