@@ -1,0 +1,17 @@
+indicator_group,subgroup,pbs_lfs_2024_25_rate,unit,source_reference
+national_overall,All Ages (15+),0.0710,proportion,"PBS Labour Force Survey 2024-25 Annual Report (19th ICLS)"
+national_youth,Youth (15-24) Overall,0.1280,proportion,"PBS Labour Force Survey 2024-25 Chapter 8 Youth Indicators"
+youth_by_sex,Youth Male (15-24),0.1310,proportion,"PBS LFS 2024-25 / Gallup Pakistan Microdata Analysis"
+youth_by_sex,Youth Female (15-24),0.1630,proportion,"PBS LFS 2024-25 / Gallup Pakistan Microdata Analysis"
+locality_overall,Urban Overall,0.0800,proportion,"PBS Labour Force Survey 2024-25 Annual Report"
+locality_overall,Rural Overall,0.0630,proportion,"PBS Labour Force Survey 2024-25 Annual Report"
+locality_gender,Urban Female,0.1750,proportion,"PBS Labour Force Survey 2024-25 Annual Report"
+provincial_overall,Khyber Pakhtunkhwa,0.0960,proportion,"PBS Labour Force Survey 2024-25 Provincial Summary"
+provincial_overall,Punjab,0.0730,proportion,"PBS Labour Force Survey 2024-25 Provincial Summary"
+provincial_overall,Balochistan,0.0550,proportion,"PBS Labour Force Survey 2024-25 Provincial Summary"
+provincial_overall,Sindh,0.0530,proportion,"PBS Labour Force Survey 2024-25 Provincial Summary"
+provincial_overall,Islamabad,0.0880,proportion,"PBS Labour Force Survey 2024-25 ICT Summary"
+youth_graduates,Degree Holders Aged 20-24 Overall,0.3280,proportion,"PBS LFS 2024-25 Microdata / Gallup Pakistan Graduate Unemployment Brief"
+youth_graduates,Degree Holders Aged 20-24 Female,0.4230,proportion,"PBS LFS 2024-25 Microdata / Gallup Pakistan Graduate Unemployment Brief"
+youth_graduates,Degree Holders Aged 20-24 Male,0.2610,proportion,"PBS LFS 2024-25 Microdata / Gallup Pakistan Graduate Unemployment Brief"
+

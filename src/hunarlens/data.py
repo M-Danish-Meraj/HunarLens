@@ -216,6 +216,16 @@ def compute_household_roster_features(
             raise KeyError(f"Missing column '{col}' required for household roster aggregation.")
 
     out = df.copy()
+
+    # If pre-aggregated household roster counts (`dependents_count`, `working_age_count`) are already attached
+    # to each youth record from the household roster schedule, compute directly from those counts.
+    if {"dependents_count", "working_age_count"}.issubset(out.columns):
+        dep = pd.to_numeric(out["dependents_count"], errors="coerce").fillna(0).clip(lower=0)
+        work = pd.to_numeric(out["working_age_count"], errors="coerce").fillna(1).clip(lower=1)
+        out["household_size"] = (dep + work).astype(int)
+        out["household_dependency_ratio"] = (dep / work).astype(float)
+        return out
+
     numeric_age = pd.to_numeric(out[age_col], errors="coerce")
 
     out["_is_dependent"] = ((numeric_age < working_age_min) | (numeric_age > working_age_max)).astype(int)

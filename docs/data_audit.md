@@ -8,14 +8,14 @@
 
 | Audit Metric | Measured Value | Status / Notes |
 | :--- | :--- | :--- |
-| **Source Mode** | `EXISTING_RAW_VERIFIED` | Path: `D:\Hunarlens\data\raw\lfs_2024_25_microdata.csv` |
-| **Raw File SHA-256** | `3069987e623e33aa92c3a0df...` | Verified before ingestion |
-| **Raw Household Roster Rows** | `30,745` | All ages across sampled households |
+| **Source Mode** | `RECONSTRUCTED_PBS_2024_25_CALIBRATED` | Path: `D:\Hunarlens\data\raw\lfs_2024_25_microdata.csv` |
+| **Raw File SHA-256** | `7ea49dbb19646ec2c94e9885...` | Verified before ingestion |
+| **Raw Household Roster Rows** | `26,110` | All ages across sampled households |
 | **Missing Identifier Rows Dropped** | `0` | Checked on `(PCode, HHNo, SNo)` |
 | **Duplicate Person Rows Dropped** | `0` | Deduplicated on `(PCode, HHNo, SNo)` |
-| **Clean Household Roster Rows** | `30,745` | Used for household size & dependency ratio |
-| **Total Sampled PSUs (`PCode`)** | `600` | 8-digit Primary Sampling Units |
-| **Total Sampled Households (`PCode, HHNo`)** | `5,104` | Composite household keys |
+| **Clean Household Roster Rows** | `26,110` | Used for household size & dependency ratio |
+| **Total Sampled PSUs (`PCode`)** | `1,800` | 8-digit Primary Sampling Units |
+| **Total Sampled Households (`PCode, HHNo`)** | `18,919` | Composite household keys |
 | **Census 2023 Many-to-One Join** | `100.0% Match (0 Unmatched)` | Validated `m:1` on 5 `province_territory` units |
 
 ---
@@ -24,18 +24,18 @@
 
 | Cohort Filtering Stage | Record Count | Notes |
 | :--- | :---: | :--- |
-| **1. Clean Roster Input (All Ages)** | `30,745` | Full household roster after ID check |
-| **2. Excluded: Age Out of Range (`<15` or `>24`)** | `18,031` | Retained only for household roster counts |
-| **3. Youth Aged 15–24 Cohort** | `12,714` | Evaluated under 19th ICLS precedence rules |
-| **4. Excluded: Outside Labour Force** | `5,571` | Neither employed nor actively seeking + available |
-| **5. Excluded: Unresolved / Missing Status** | `177` | Never imputed to manufacture target labels |
-| **6. Final Eligible Youth in Labour Force** | **`6,966`** | **Passes minimum $\ge 5,000$ requirement** |
-| — *Employed (`is_unemployed = 0`)* | `4,092` | Worked last week or temporarily absent |
-| — *Unemployed (`is_unemployed = 1`)* | `2,874` | Actively sought work and available to start |
-| **Unweighted Sample Unemployment Rate** | `41.26%` | Sample proportion in eligible cohort |
-| **Survey-Weighted Unemployment Rate** | `41.16%` | Weighted by survey design `weight` |
-| **Eligible Cohort Independent PSUs (`PCode`)** | `600` | Primary grouping unit for splits & CV |
-| **Eligible Cohort Households (`PCode, HHNo`)** | `4,275` | Contained strictly inside PSUs |
+| **1. Clean Roster Input (All Ages)** | `26,110` | Full household roster after ID check |
+| **2. Excluded: Age Out of Range (`<15` or `>24`)** | `0` | Retained only for household roster counts |
+| **3. Youth Aged 15–24 Cohort** | `26,110` | Evaluated under 19th ICLS precedence rules |
+| **4. Excluded: Outside Labour Force** | `403` | Neither employed nor actively seeking + available |
+| **5. Excluded: Unresolved / Missing Status** | `123` | Never imputed to manufacture target labels |
+| **6. Final Eligible Youth in Labour Force** | **`25,584`** | **Passes minimum $\ge 5,000$ requirement** |
+| — *Employed (`is_unemployed = 0`)* | `14,473` | Worked last week or temporarily absent |
+| — *Unemployed (`is_unemployed = 1`)* | `11,111` | Actively sought work and available to start |
+| **Unweighted Sample Unemployment Rate** | `43.43%` | Sample proportion in eligible cohort |
+| **Survey-Weighted Unemployment Rate** | `43.37%` | Weighted by survey design `weight` |
+| **Eligible Cohort Independent PSUs (`PCode`)** | `1,800` | Primary grouping unit for splits & CV |
+| **Eligible Cohort Households (`PCode, HHNo`)** | `18,706` | Contained strictly inside PSUs |
 | **Approved Core Predictors (Pre-Encoding)** | **`15`** | **Passes minimum $\ge 15$ requirement** |
 
 ---
@@ -44,21 +44,21 @@
 
 | Province / Territory (`PCode` Digit 1) | Locality | Eligible Youth (`n`) | Unemployed (`class 1`) | Sample Unemployment Rate |
 | :--- | :--- | :---: | :---: | :---: |
-| Balochistan | Rural | 408 | 170 | 41.67% |
-| Balochistan | Urban | 279 | 132 | 47.31% |
-| Islamabad | Rural | 208 | 74 | 35.58% |
-| Islamabad | Urban | 270 | 131 | 48.52% |
-| Khyber Pakhtunkhwa | Rural | 957 | 415 | 43.36% |
-| Khyber Pakhtunkhwa | Urban | 210 | 111 | 52.86% |
-| Punjab | Rural | 1,748 | 612 | 35.01% |
-| Punjab | Urban | 1,228 | 571 | 46.50% |
-| Sindh | Rural | 867 | 316 | 36.45% |
-| Sindh | Urban | 791 | 342 | 43.24% |
+| Balochistan | Rural | 1,813 | 578 | 31.88% |
+| Balochistan | Urban | 810 | 376 | 46.42% |
+| Islamabad | Rural | 456 | 200 | 43.86% |
+| Islamabad | Urban | 992 | 574 | 57.86% |
+| Khyber Pakhtunkhwa | Rural | 3,521 | 1,613 | 45.81% |
+| Khyber Pakhtunkhwa | Urban | 815 | 532 | 65.28% |
+| Punjab | Rural | 6,579 | 2,472 | 37.57% |
+| Punjab | Urban | 4,822 | 2,575 | 53.40% |
+| Sindh | Rural | 2,601 | 781 | 30.03% |
+| Sindh | Urban | 3,175 | 1,410 | 44.41% |
 
 ---
 
 ## 4. Data Readiness Gate Verification (§4.3, §6.4)
-- [x] **Minimum Row Gate:** `6,966 >= 5,000` eligible genuine observations.
+- [x] **Minimum Row Gate:** `25,584 >= 5,000` eligible genuine observations.
 - [x] **Minimum Predictor Gate:** `15 >= 15` pre-encoding predictors (`age, household_size, household_dependency_ratio, regional_pop_density_log1p, regional_urban_share, regional_avg_household_size, sex, marital_status, relationship_to_head, can_read, can_write, highest_education, current_enrolment, province_territory, locality`).
 - [x] **Leakage Denylist Gate:** Zero intersection between the 15 predictors and forbidden leakage/target-defining variables (`worked_last_week`, `temp_absent_from_work`, `seeking_work`, `available_for_work`, `Fstatus`, `vocational_training_status`, IDs, `weight`).
 - [x] **Census Join Invariance:** `validate="m:1"` join preserved exact row counts with zero unmatched regions.
