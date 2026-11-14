@@ -50,7 +50,7 @@
 ## Phase 3: Leakage-Free Grouped Splitting & Preprocessing Pipeline
 *Objective: Enforce PSU-disjoint partitioning and fold-local scikit-learn transformations (§6, §8).*
 
-- [ ] **Step 3.1 — PSU-Disjoint Split & Fold Generator (`src/hunarlens/splits.py`)**
+- [x] **Step 3.1 — PSU-Disjoint Split & Fold Generator (`src/hunarlens/splits.py`)** *(Completed: Implemented and executed `src/hunarlens/splits.py`, freezing PSU-disjoint partitions: Train=4,895 rows [420 PSUs, 70.27%], Val=1,038 rows [90 PSUs, 14.90%], Test=1,033 rows [90 PSUs, 14.83%] plus 5-fold StratifiedGroupKFold inside training; verified zero PSU/household/person overlap and saved `data/splits/split_manifest.json` and `docs/split_audit.md`.)*
   - Implement `GroupShuffleSplit` (70/15/15 train/val/test with seeds 42 and 43) and 5-fold `StratifiedGroupKFold` (seed 44) inside training.
   - Enforce zero PSU/household overlap assertions and export `docs/split_audit.md`.
 - [ ] **Step 3.2 — Custom Transformers & Scikit-Learn Pipeline (`src/hunarlens/features.py`)**

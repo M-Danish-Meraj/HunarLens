@@ -280,3 +280,4 @@ def test_readiness_gate_rejects_leakage_or_small_sample() -> None:
             forbidden_denylist=["worked_last_week"],
             min_rows=5000,
         )
+

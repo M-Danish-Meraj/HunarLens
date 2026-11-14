@@ -1,0 +1,121 @@
+{
+  "total_eligible_rows": 6966,
+  "total_psus": 600,
+  "total_households": 4275,
+  "overall_unemployment_rate": 0.412575,
+  "seeds": {
+    "test_split": 42,
+    "val_split": 43,
+    "cv_folds": 44
+  },
+  "config": {
+    "group_column": "PCode",
+    "test_size": 0.15,
+    "val_size_of_remaining": 0.17647,
+    "cv_n_splits": 5
+  },
+  "partitions": {
+    "train": {
+      "row_count": 4895,
+      "row_share": 0.702699,
+      "psu_count": 420,
+      "household_count": 3005,
+      "employed_count": 2904,
+      "unemployed_count": 1991,
+      "unemployment_rate": 0.406742,
+      "provinces_covered": [
+        "Balochistan",
+        "Islamabad",
+        "Khyber Pakhtunkhwa",
+        "Punjab",
+        "Sindh"
+      ],
+      "psu_sha256": "424a6ab2004674977c43ee9fa001205937ca83c5bd214eb202a331bfe337a7a2",
+      "person_keys_sha256": "416fb55ca3abdd03cb838045c857625f09f93bf9061e4d2e889505ab4783a8a0"
+    },
+    "val": {
+      "row_count": 1038,
+      "row_share": 0.149009,
+      "psu_count": 90,
+      "household_count": 641,
+      "employed_count": 590,
+      "unemployed_count": 448,
+      "unemployment_rate": 0.431599,
+      "provinces_covered": [
+        "Balochistan",
+        "Islamabad",
+        "Khyber Pakhtunkhwa",
+        "Punjab",
+        "Sindh"
+      ],
+      "psu_sha256": "6d8d919bea1bdb706780bd2afe8a64870ee8081046d133fd166d78215b1d6294",
+      "person_keys_sha256": "b4dee9cff5c1ba5183b3226dcc5971ee1e9e3cc2567b4c6da9c55cb415dd3461"
+    },
+    "test": {
+      "row_count": 1033,
+      "row_share": 0.148292,
+      "psu_count": 90,
+      "household_count": 629,
+      "employed_count": 598,
+      "unemployed_count": 435,
+      "unemployment_rate": 0.421104,
+      "provinces_covered": [
+        "Balochistan",
+        "Islamabad",
+        "Khyber Pakhtunkhwa",
+        "Punjab",
+        "Sindh"
+      ],
+      "psu_sha256": "f5329f3c81e16ed1b8ecb76d1e69b5e66af8b4ce719fd265e00280c4a62d12f7",
+      "person_keys_sha256": "2805af022caa225c61451df324248e7f068a8379cbb9f55974fde790324b3a3f"
+    }
+  },
+  "training_cv_folds": [
+    {
+      "fold_id": 0,
+      "train_rows": 3910,
+      "val_rows": 985,
+      "val_psus": 84,
+      "val_employed": 585,
+      "val_unemployed": 400,
+      "val_unemployment_rate": 0.406091
+    },
+    {
+      "fold_id": 1,
+      "train_rows": 3919,
+      "val_rows": 976,
+      "val_psus": 87,
+      "val_employed": 580,
+      "val_unemployed": 396,
+      "val_unemployment_rate": 0.405738
+    },
+    {
+      "fold_id": 2,
+      "train_rows": 3922,
+      "val_rows": 973,
+      "val_psus": 80,
+      "val_employed": 575,
+      "val_unemployed": 398,
+      "val_unemployment_rate": 0.409044
+    },
+    {
+      "fold_id": 3,
+      "train_rows": 3918,
+      "val_rows": 977,
+      "val_psus": 84,
+      "val_employed": 578,
+      "val_unemployed": 399,
+      "val_unemployment_rate": 0.408393
+    },
+    {
+      "fold_id": 4,
+      "train_rows": 3911,
+      "val_rows": 984,
+      "val_psus": 85,
+      "val_employed": 586,
+      "val_unemployed": 398,
+      "val_unemployment_rate": 0.404472
+    }
+  ],
+  "overlap_assertions_passed": true
+}
